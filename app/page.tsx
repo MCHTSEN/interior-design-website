@@ -55,12 +55,12 @@ export default function HomePage() {
               
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
-                  Unutulmaz
+                  O an'ı
                 </span>
                 <br />
-                <span className="text-gray-900">Deneyimler</span>
+                <span className="text-gray-900">tam da hayal ettiğiniz</span>
                 <br />
-                <span className="text-gray-900">Yaratıyoruz</span>
+                <span className="text-gray-900">gibi yaşayın</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 max-w-xl">
@@ -97,40 +97,14 @@ export default function HomePage() {
             <div className="relative lg:order-2">
               <div className="relative">
                 {/* Main Image */}
-                <div className="relative z-10 bg-white p-4 rounded-3xl shadow-2xl">
+                <div className="relative z-10 rounded-3xl">
                   <img 
                     src="/hero.JPG" 
                     alt="Solara Event Organization" 
-                    className="w-full h-[500px] lg:h-[600px] object-cover rounded-2xl"
+                    className="w-4/5 mx-auto h-[540px] lg:h-[630px] object-cover rounded-3xl"
                   />
                 </div>
                 
-                {/* Floating Card 1 */}
-                <div className="absolute -left-4 top-16 z-20 bg-white p-4 rounded-2xl shadow-xl border border-pink-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
-                      <HeartHandshake className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 text-sm">Düğün Organizasyonu</div>
-                      <div className="text-xs text-gray-500">Kusursuz detaylar</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Card 2 */}
-                <div className="absolute -right-4 bottom-20 z-20 bg-white p-4 rounded-2xl shadow-xl border border-pink-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
-                      <Building className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 text-sm">Kurumsal Etkinlik</div>
-                      <div className="text-xs text-gray-500">Profesyonel hizmet</div>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Background Decoration */}
                 <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-pink-200 to-rose-300 rounded-full opacity-20"></div>
                 <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-pink-300 to-rose-400 rounded-full opacity-30"></div>
