@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { ServicesAccordion } from "@/components/services-accordion"
 import { Star, Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react"
+import { AnimatedSection } from "@/components/animated-section"
 
 export default function HomePage() {
   return (
@@ -61,7 +62,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16">
+      <AnimatedSection className="py-16">
         <div className="px-6 max-w-7xl mx-auto">
           <div className="mb-12">
             <div className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm mb-6">Biz Kimiz</div>
@@ -159,10 +160,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* How We Work Section -> Changed to Neler Yapıyoruz */}
-      <section className="py-16 px-6 bg-gray-50">
+      <AnimatedSection className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Neler Yapıyoruz</h2>
@@ -171,19 +172,19 @@ export default function HomePage() {
 
           <ServicesAccordion />
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* CTA Section */}
-      <section className="py-16 px-6 text-center">
+      <AnimatedSection className="py-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Get inspired by our work</h2>
           <p className="text-gray-600 mb-8">Projelerimizden ilham alın ve hayalinizdeki mekanı gerçeğe dönüştürün.</p>
           <Button size="lg">Projelerimizi İnceleyin</Button>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Modern Design Section */}
-      <section className="py-16 px-6">
+      <AnimatedSection className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -213,10 +214,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Garden Design Section */}
-      <section className="py-16 px-6 bg-gray-900 text-white">
+      <AnimatedSection className="py-16 px-6 bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -254,10 +255,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Bathroom Renovation Section */}
-      <section className="py-16 px-6">
+      <AnimatedSection className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -287,10 +288,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Client Reviews */}
-      <section className="py-16 bg-gray-50">
+      <AnimatedSection className="py-16 bg-gray-50">
         <div className="w-full">
           <div className="text-center mb-12 px-6">
             <h2 className="text-3xl font-bold mb-4">Hear from our clients</h2>
@@ -382,10 +383,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6">
+      <AnimatedSection className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Sık sorulan sorular</h2>
@@ -415,10 +416,10 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Contact Section */}
-      <section className="py-16 px-6 bg-black text-white">
+      <AnimatedSection className="py-16 px-6 bg-black text-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -463,7 +464,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Footer */}
       <footer className="bg-black text-white py-12 px-6">
