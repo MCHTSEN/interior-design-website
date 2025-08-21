@@ -103,6 +103,7 @@ export default function HomePage() {
                     alt="Solara Event Organization" 
                     className="w-4/5 mx-auto h-[540px] lg:h-[630px] object-cover rounded-3xl"
                   />
+                  
                 </div>
                 
                 {/* Background Decoration */}
