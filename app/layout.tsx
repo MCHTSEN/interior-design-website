@@ -10,9 +10,9 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Solara Event & Organization | Profesyonel Etkinlik ve Organizasyon Hizmetleri',
+  description: 'Solara Event - Kurumsal ve bireysel etkinlikleriniz için profesyonel organizasyon hizmetleri. Düğün, nişan, kurumsal etkinlikler ve daha fazlası.',
+  keywords: 'organizasyon, etkinlik, düğün, nişan, kurumsal etkinlik, gala, lansman, solara event',
 }
 
 export default function RootLayout({

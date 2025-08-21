@@ -1,465 +1,589 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { AnimatedCounter } from "@/components/animated-counter"
 import { ServicesAccordion } from "@/components/services-accordion"
-import { Star, Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react"
+import { Star, Phone, Mail, MapPin, Instagram, Users, Award, Building, Calendar, CheckCircle, Sparkles, Clock, HeartHandshake } from "lucide-react"
 import { AnimatedSection } from "@/components/animated-section"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-pink-500/20 backdrop-blur-sm border-b border-pink-200/30 transition-all duration-300">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-black rounded-full"></div>
-          <span className="font-semibold text-lg">Refit</span>
+      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-pink-50 to-rose-50 backdrop-blur-sm border-b border-pink-200/30 transition-all duration-300">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+            <Sparkles className="w-5 h-5 text-white" />
+          </div>
+          <span className="font-bold text-xl bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Solara Event</span>
         </div>
         <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-gray-600 hover:text-black">
-            Hakkımızda
+          <a href="#about" className="text-gray-700 hover:text-pink-600 transition-colors">
+            Biz Kimiz
           </a>
-          <a href="#" className="text-gray-600 hover:text-black">
+          <a href="#services" className="text-gray-700 hover:text-pink-600 transition-colors">
             Hizmetler
           </a>
-          <a href="#" className="text-gray-600 hover:text-black">
-            Projeler
+          <a href="#why-us" className="text-gray-700 hover:text-pink-600 transition-colors">
+            Neden Biz
           </a>
-          <a href="#" className="text-gray-600 hover:text-black">
+          <a href="#process" className="text-gray-700 hover:text-pink-600 transition-colors">
+            Nasıl Çalışıyoruz
+          </a>
+          <a href="#contact" className="text-gray-700 hover:text-pink-600 transition-colors">
             İletişim
           </a>
         </div>
-        <Button variant="outline" size="sm">
+        <Button className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white border-0">
           Teklif Al
         </Button>
       </nav>
 
       {/* Hero Section */}
-      <section className="grid md:grid-cols-2 min-h-[80vh]">
-        <div className="bg-pink-100 flex items-center justify-center p-12">
-          <div className="max-w-md">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              O anı,
-              <br />
-              tam da hayal ettiğiniz
-              <br />
-              gibi yaşayın
-            </h1>
-            <p className="text-gray-600 mb-8">
-              İç mekan tasarımında uzman ekibimizle hayalinizdeki yaşam alanını gerçeğe dönüştürün.
-            </p>
-            <div className="flex gap-2">
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-800 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+      <section className="relative min-h-[85vh] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-rose-50 to-white"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full py-12">
+            {/* Left Content */}
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6 shadow-lg">
+                <Sparkles className="w-4 h-4 text-pink-500" />
+                <span className="text-gray-700">Kurumsal & Bireysel Organizasyonlar</span>
+              </div>
+              
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+                  Unutulmaz
+                </span>
+                <br />
+                <span className="text-gray-900">Deneyimler</span>
+                <br />
+                <span className="text-gray-900">Yaratıyoruz</span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 mb-8 max-w-xl">
+                Profesyonel etkinlik organizasyonlarında uzman ekibimizle, hayalinizdeki özel günleri gerçeğe dönüştürüyoruz.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+                  Hemen Başlayalım
+                </Button>
+                <Button size="lg" variant="outline" className="border-pink-500 text-pink-600 hover:bg-pink-50">
+                  Projelerimiz
+                </Button>
+              </div>
+
+              {/* Stats Preview */}
+              <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-600 mb-1">500+</div>
+                  <div className="text-sm text-gray-600">Başarılı Etkinlik</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-600 mb-1">50+</div>
+                  <div className="text-sm text-gray-600">Otel İş Ortağı</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-600 mb-1">15</div>
+                  <div className="text-sm text-gray-600">Yıllık Deneyim</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative lg:order-2">
+              <div className="relative">
+                {/* Main Image */}
+                <div className="relative z-10 bg-white p-4 rounded-3xl shadow-2xl">
+                  <img 
+                    src="/hero.JPG" 
+                    alt="Solara Event Organization" 
+                    className="w-full h-[500px] lg:h-[600px] object-cover rounded-2xl"
+                  />
+                </div>
+                
+                {/* Floating Card 1 */}
+                <div className="absolute -left-4 top-16 z-20 bg-white p-4 rounded-2xl shadow-xl border border-pink-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+                      <HeartHandshake className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-sm">Düğün Organizasyonu</div>
+                      <div className="text-xs text-gray-500">Kusursuz detaylar</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Card 2 */}
+                <div className="absolute -right-4 bottom-20 z-20 bg-white p-4 rounded-2xl shadow-xl border border-pink-100">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+                      <Building className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-sm">Kurumsal Etkinlik</div>
+                      <div className="text-xs text-gray-500">Profesyonel hizmet</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Background Decoration */}
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-pink-200 to-rose-300 rounded-full opacity-20"></div>
+                <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-pink-300 to-rose-400 rounded-full opacity-30"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="relative">
-          <img src="/elegant-floral-dining.png" alt="Elegant dining room" className="w-full h-full object-cover" />
         </div>
       </section>
 
-      {/* Services Section */}
-      <AnimatedSection className="py-16">
-        <div className="px-6 max-w-7xl mx-auto">
-          <div className="mb-12">
-            <div className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm mb-6">Biz Kimiz</div>
-            <h2 className="text-3xl font-bold mb-4">
-              Küçük
-              <br />
-              dokunuşlarla
-              <br />
-              büyük
-              <br />
-              mutluluklar
-            </h2>
-            <p className="text-gray-600 max-w-md">
-              Hoş geldiniz! Bizler, nişan ve evlilik organizasyonları konusunda uzmanlaşmış, detaylara önem veren
-              profesyonelleriz. Her çiftin hikâyesine özel dokunuşlar katarak, özel günlerinizi hayallerinizdeki gibi
-              gerçeğe dönüştürmek için buradayız.
-            </p>
-          </div>
-        </div>
-
-        <div className="relative overflow-hidden mb-12 w-full">
-          <div className="flex animate-scroll gap-8">
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/white-flower-wedding.png" alt="Wedding setup" className="w-full h-full object-cover" />
-            </div>
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/modern-living-room.png" alt="Living room" className="w-full h-full object-cover" />
-            </div>
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/luxury-soft-bedroom.png" alt="Bedroom" className="w-full h-full object-cover" />
-            </div>
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/hands-arranging-flowers.png" alt="Flower arrangement" className="w-full h-full object-cover" />
-            </div>
-            {/* Duplicate images for seamless loop */}
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/white-flower-wedding.png" alt="Wedding setup" className="w-full h-full object-cover" />
-            </div>
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/modern-living-room.png" alt="Living room" className="w-full h-full object-cover" />
-            </div>
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/luxury-soft-bedroom.png" alt="Bedroom" className="w-full h-full object-cover" />
-            </div>
-            <div className="flex-shrink-0 w-[460px] h-96 overflow-hidden rounded-lg">
-              <img src="/hands-arranging-flowers.png" alt="Flower arrangement" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-
-        <div className="px-6 max-w-7xl mx-auto">
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {/* About Section */}
+      <AnimatedSection className="py-20" id="about">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="text-4xl font-bold mb-2">
-                <AnimatedCounter end={15} />
+              <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+                Biz Kimiz?
               </div>
-              <div className="text-gray-600 text-sm">
-                Yılların Deneyimi
-                <br />
-                <span className="text-xs">Improving homes with expert craftsmanship for years</span>
-              </div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">
-                <AnimatedCounter end={250} />
-              </div>
-              <div className="text-gray-600 text-sm">
-                Tamamlanan
-                <br />
-                Organizasyonlar
-                <br />
-                <span className="text-xs">250+ kusursuz nişan ve düğün planlandı ve uygulandı</span>
-              </div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">
-                <AnimatedCounter end={30} />
-              </div>
-              <div className="text-gray-600 text-sm">
-                Profesyonel Ekip
-                <br />
-                <span className="text-xs">30+ deneyimli organizasyon koordinatörüyle hizmetinizdeyiz</span>
+              <h2 className="text-4xl font-bold mb-6 text-gray-900">
+                Solara Event & Organization
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Solara Event, hem bireysel hem kurumsal organizasyonlarda profesyonel etkinlikler tasarlayan bir organizasyon firmasıdır.
+              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Amacımız sadece "güzel bir gün" değil, <strong>unutulmaz deneyimler</strong> sunmak. Bu yolda, iş ortaklığı yaptığımız otellerin itibarı ve müşteri memnuniyeti bizim için daima ön plandadır.
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <span className="text-sm text-gray-700">Profesyonel Ekip</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <span className="text-sm text-gray-700">%100 Memnuniyet</span>
+                </div>
               </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">
-                <AnimatedCounter end={100} suffix="%" />
-              </div>
-              <div className="text-gray-600 text-sm">
-                Müşteri Memnuniyeti
-                <br />
-                <span className="text-xs">Tüm çiftlerimizden %100 memnuniyet aldık</span>
+            
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <img src="/biz_kimiz_1.JPG" alt="Solara Event organizasyon detayları" className="rounded-2xl shadow-xl" />
+                  <img src="/biz_kimiz_2.JPG" alt="Profesyonel etkinlik kurulumu" className="rounded-2xl shadow-xl" />
+                </div>
+                <div className="space-y-4 pt-8">
+                  <img src="/biz_kimiz_3.JPG" alt="Lüks etkinlik dekorasyonu" className="rounded-2xl shadow-xl" />
+                  <img src="/biz_kimiz_4.JPG" alt="Detay çalışması ve koordinasyon" className="rounded-2xl shadow-xl" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </AnimatedSection>
 
-      {/* How We Work Section -> Changed to Neler Yapıyoruz */}
-      <AnimatedSection className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+      {/* Stats Section */}
+      <AnimatedSection className="py-16 bg-gradient-to-r from-pink-50 to-rose-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="text-4xl font-bold mb-2 text-pink-600">
+                <AnimatedCounter end={500} suffix="+" />
+              </div>
+              <div className="text-gray-700 font-medium">
+                Başarılı Etkinlik
+              </div>
+              <div className="text-gray-500 text-sm mt-1">
+                Kusursuz organizasyon
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="text-4xl font-bold mb-2 text-pink-600">
+                <AnimatedCounter end={50} suffix="+" />
+              </div>
+              <div className="text-gray-700 font-medium">
+                Otel İş Ortağı
+              </div>
+              <div className="text-gray-500 text-sm mt-1">
+                Güvenilir işbirlikleri
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="text-4xl font-bold mb-2 text-pink-600">
+                <AnimatedCounter end={15} />
+              </div>
+              <div className="text-gray-700 font-medium">
+                Yıllık Deneyim
+              </div>
+              <div className="text-gray-500 text-sm mt-1">
+                Sektör tecrübesi
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="text-4xl font-bold mb-2 text-pink-600">
+                <AnimatedCounter end={100} suffix="%" />
+              </div>
+              <div className="text-gray-700 font-medium">
+                Müşteri Memnuniyeti
+              </div>
+              <div className="text-gray-500 text-sm mt-1">
+                Mutlu müşteriler
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Services Section */}
+      <AnimatedSection className="py-20 px-6" id="services">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Neler Yapıyoruz</h2>
-            <p className="text-gray-600">Sunduğumuz hizmetler ve uzmanlık alanlarımız</p>
+            <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+              Hizmetlerimiz
+            </div>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Hizmet Alanlarımız</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Bireysel ve kurumsal tüm organizasyon ihtiyaçlarınız için profesyonel çözümler sunuyoruz.
+            </p>
           </div>
 
           <ServicesAccordion />
         </div>
       </AnimatedSection>
 
-      {/* CTA Section */}
-      <AnimatedSection className="py-16 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Get inspired by our work</h2>
-          <p className="text-gray-600 mb-8">Projelerimizden ilham alın ve hayalinizdeki mekanı gerçeğe dönüştürün.</p>
-          <Button size="lg">Projelerimizi İnceleyin</Button>
-        </div>
-      </AnimatedSection>
-
-      {/* Modern Design Section */}
-      <AnimatedSection className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="/minimalist-wooden-kitchen.png" alt="Modern kitchen" className="w-full rounded-lg" />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Modern tasarım anlayışı</h2>
-              <p className="text-gray-600 mb-6">
-                Çağdaş tasarım anlayışımızla fonksiyonellik ve estetiği bir araya getiriyoruz. Her detayda kaliteyi ve
-                zarafeti hissedebileceğiniz mekanlar yaratıyoruz.
-              </p>
-              <div className="flex gap-4 mb-6">
-                <Button variant="outline" size="sm">
-                  Daha Fazla
-                </Button>
-                <Button variant="outline" size="sm">
-                  Galeri
-                </Button>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
-                <div>
-                  <div className="font-semibold text-sm">Ahmet Yılmaz</div>
-                  <div className="text-gray-600 text-xs">Baş Tasarımcı</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Garden Design Section */}
-      <AnimatedSection className="py-16 px-6 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Exterior garden peyzajı</h2>
-              <p className="text-gray-300 mb-6">
-                Dış mekan tasarımlarımızla doğayla uyum içinde yaşam alanları yaratıyoruz. Bahçe peyzajından balkon
-                düzenlemelerine kadar her alanda uzmanız.
-              </p>
-              <div className="flex gap-4 mb-6">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="text-white border-white hover:bg-white hover:text-black bg-transparent"
-                >
-                  Daha Fazla
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="text-white border-white hover:bg-white hover:text-black bg-transparent"
-                >
-                  Galeri
-                </Button>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
-                <div>
-                  <div className="font-semibold text-sm">Elif Kaya</div>
-                  <div className="text-gray-400 text-xs">Peyzaj Mimarı</div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <img src="/garden-landscape-design.png" alt="Garden design" className="w-full rounded-lg" />
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Bathroom Renovation Section */}
-      <AnimatedSection className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="/luxury-bathroom-renovation.png" alt="Bathroom renovation" className="w-full rounded-lg" />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Bathroom renovation</h2>
-              <p className="text-gray-600 mb-6">
-                Banyo yenileme projelerimizde modern teknoloji ve şık tasarımı bir araya getiriyoruz. Konfor ve estetiği
-                buluşturan banyo mekanları yaratıyoruz.
-              </p>
-              <div className="flex gap-4 mb-6">
-                <Button variant="outline" size="sm">
-                  Daha Fazla
-                </Button>
-                <Button variant="outline" size="sm">
-                  Galeri
-                </Button>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
-                <div>
-                  <div className="font-semibold text-sm">Mehmet Demir</div>
-                  <div className="text-gray-600 text-xs">İç Mimar</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Client Reviews */}
-      <AnimatedSection className="py-16 bg-gray-50">
-        <div className="w-full">
-          <div className="text-center mb-12 px-6">
-            <h2 className="text-3xl font-bold mb-4">Hear from our clients</h2>
-          </div>
-
-          {/* First row - scrolling right */}
-          <div className="relative overflow-hidden mb-8">
-            <div className="flex animate-scroll-right gap-6">
-              {[
-                { name: "Ayşe Yılmaz", location: "İstanbul", review: "Harika bir deneyimdi. Ekip çok profesyonel ve sonuç beklentilerimi aştı. Evimiz artık çok daha güzel görünüyor.", bg: "bg-white" },
-                { name: "Mehmet Demir", location: "Ankara", review: "Organizasyon mükemmeldi. Her detay düşünülmüş ve hayalimizden de güzel oldu. Teşekkürler!", bg: "bg-gray-100" },
-                { name: "Elif Kaya", location: "İzmir", review: "Profesyonel yaklaşım ve kaliteli hizmet. Düğünümüz tam istediğimiz gibiydi.", bg: "bg-white" },
-                { name: "Ali Özkan", location: "Bursa", review: "Detaylara gösterdikleri özen ve yaratıcılıkları gerçekten etkileyici. Herkese tavsiye ederim.", bg: "bg-gray-100" },
-                { name: "Zeynep Arslan", location: "Antalya", review: "Nişan törenimiz harika geçti. Ekip çok ilgili ve deneyimliydi.", bg: "bg-white" },
-                { name: "Burak Yıldız", location: "Adana", review: "Mükemmel organizasyon ve hizmet kalitesi. Çok memnun kaldık.", bg: "bg-gray-100" },
-              ].concat([
-                { name: "Ayşe Yılmaz", location: "İstanbul", review: "Harika bir deneyimdi. Ekip çok profesyonel ve sonuç beklentilerimi aştı. Evimiz artık çok daha güzel görünüyor.", bg: "bg-white" },
-                { name: "Mehmet Demir", location: "Ankara", review: "Organizasyon mükemmeldi. Her detay düşünülmüş ve hayalimizden de güzel oldu. Teşekkürler!", bg: "bg-gray-100" },
-                { name: "Elif Kaya", location: "İzmir", review: "Profesyonel yaklaşım ve kaliteli hizmet. Düğünümüz tam istediğimiz gibiydi.", bg: "bg-white" },
-                { name: "Ali Özkan", location: "Bursa", review: "Detaylara gösterdikleri özen ve yaratıcılıkları gerçekten etkileyici. Herkese tavsiye ederim.", bg: "bg-gray-100" },
-                { name: "Zeynep Arslan", location: "Antalya", review: "Nişan törenimiz harika geçti. Ekip çok ilgili ve deneyimliydi.", bg: "bg-white" },
-                { name: "Burak Yıldız", location: "Adana", review: "Mükemmel organizasyon ve hizmet kalitesi. Çok memnun kaldık.", bg: "bg-gray-100" },
-              ]).map((client, i) => (
-                <Card key={i} className={`flex-shrink-0 w-80 h-48 p-6 ${client.bg} border-0 shadow-sm`}>
-                  <CardContent className="p-0 h-full flex flex-col justify-between">
-                    <div>
-                      <div className="flex mb-3">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        "{client.review}"
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-3 mt-4">
-                      <div className="w-8 h-8 bg-gray-300 rounded"></div>
-                      <div>
-                        <div className="font-semibold text-sm">{client.name}</div>
-                        <div className="text-gray-500 text-xs">{client.location}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Second row - scrolling left */}
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll-left gap-6">
-              {[
-                { name: "Fatma Şahin", location: "Konya", review: "Evlilik teklifim için hazırladıkları sürpriz organizasyon muhteşemdi. Her şey mükemmeldi!", bg: "bg-gray-100" },
-                { name: "Emre Çelik", location: "Trabzon", review: "Düğün organizasyonumuz için aldığımız hizmet gerçekten kaliteliydi. Teşekkürler!", bg: "bg-white" },
-                { name: "Selin Aydın", location: "Eskişehir", review: "Nişan törenimiz hayal ettiğimizden çok daha güzel oldu. Herkese tavsiye ederim.", bg: "bg-gray-100" },
-                { name: "Oğuz Kara", location: "Gaziantep", review: "Profesyonel ekip ve mükemmel organizasyon. Çok memnun kaldık.", bg: "bg-white" },
-                { name: "Deniz Öztürk", location: "Samsun", review: "Her detayı düşünülmüş, kaliteli bir hizmet aldık. Teşekkürler!", bg: "bg-gray-100" },
-                { name: "Ceren Yılmaz", location: "Kayseri", review: "Organizasyon ekibi çok deneyimli ve yaratıcı. Sonuçtan çok memnunuz.", bg: "bg-white" },
-              ].concat([
-                { name: "Fatma Şahin", location: "Konya", review: "Evlilik teklifim için hazırladıkları sürpriz organizasyon muhteşemdi. Her şey mükemmeldi!", bg: "bg-gray-100" },
-                { name: "Emre Çelik", location: "Trabzon", review: "Düğün organizasyonumuz için aldığımız hizmet gerçekten kaliteliydi. Teşekkürler!", bg: "bg-white" },
-                { name: "Selin Aydın", location: "Eskişehir", review: "Nişan törenimiz hayal ettiğimizden çok daha güzel oldu. Herkese tavsiye ederim.", bg: "bg-gray-100" },
-                { name: "Oğuz Kara", location: "Gaziantep", review: "Profesyonel ekip ve mükemmel organizasyon. Çok memnun kaldık.", bg: "bg-white" },
-                { name: "Deniz Öztürk", location: "Samsun", review: "Her detayı düşünülmüş, kaliteli bir hizmet aldık. Teşekkürler!", bg: "bg-gray-100" },
-                { name: "Ceren Yılmaz", location: "Kayseri", review: "Organizasyon ekibi çok deneyimli ve yaratıcı. Sonuçtan çok memnunuz.", bg: "bg-white" },
-              ]).map((client, i) => (
-                <Card key={i} className={`flex-shrink-0 w-80 h-48 p-6 ${client.bg} border-0 shadow-sm`}>
-                  <CardContent className="p-0 h-full flex flex-col justify-between">
-                    <div>
-                      <div className="flex mb-3">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        "{client.review}"
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-3 mt-4">
-                      <div className="w-8 h-8 bg-gray-300 rounded"></div>
-                      <div>
-                        <div className="font-semibold text-sm">{client.name}</div>
-                        <div className="text-gray-500 text-xs">{client.location}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* FAQ Section */}
-      <AnimatedSection className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+      {/* Why Us Section */}
+      <AnimatedSection className="py-20 bg-gradient-to-br from-pink-900 to-rose-900 text-white" id="why-us">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Sık sorulan sorular</h2>
-            <p className="text-gray-600">Merak ettiğiniz konular hakkında bilgi alın</p>
+            <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6">
+              Neden Biz?
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Neden Doğru İş Ortağıyız?</h2>
+            <p className="text-pink-100 max-w-3xl mx-auto leading-relaxed">
+              Solara Event olarak, otel operasyonlarına %100 uyum sağlayan bir organizasyon anlayışıyla çalışıyoruz.
+            </p>
           </div>
 
-          <div className="space-y-4">
-            <Card className="p-6">
-              <CardContent className="p-0">
-                <h3 className="font-semibold mb-2">Proje süresi ne kadar sürer?</h3>
-                <p className="text-gray-600 text-sm">
-                  Proje büyüklüğüne göre değişmekle birlikte ortalama 2-6 hafta arası sürmektedir.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-6">
-              <CardContent className="p-0">
-                <h3 className="font-semibold mb-2">Ücretsiz keşif yapıyor musunuz?</h3>
-                <p className="text-gray-600 text-sm">Evet, ilk görüşme ve keşif tamamen ücretsizdir.</p>
-              </CardContent>
-            </Card>
-            <Card className="p-6">
-              <CardContent className="p-0">
-                <h3 className="font-semibold mb-2">Hangi bölgelerde hizmet veriyorsunuz?</h3>
-                <p className="text-gray-600 text-sm">İstanbul ve çevre illerde hizmet vermekteyiz.</p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Profesyonel Ekip</h3>
+              <p className="text-pink-200 leading-relaxed">
+                Sessizce gelir, zarafetle kurulumunu yapar ve otelden ayrılır. İşimizi biliriz.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Otel Uyumu</h3>
+              <p className="text-pink-200 leading-relaxed">
+                Kurulumdan çıkışa kadar tüm süreci, otelin akışını aksatmadan, hızlı ve düzenli tamamlarız.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <HeartHandshake className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Çift Taraflı Memnuniyet</h3>
+              <p className="text-pink-200 leading-relaxed">
+                Misafir memnuniyeti kadar, iş ortağımız olan otellerin huzuru ve düzeni de önceliğimizdir.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <p className="text-center text-lg leading-relaxed">
+              <span className="text-pink-300 font-semibold">Profesyonelliğinizi Tamamlayan İş Ortağı:</span> Solara Event, otelinizin organizasyon süreçlerindeki profesyonel duruşunu güçlendiren bir çözüm ortağıdır. Misafirleriniz için sadece kusursuz bir etkinlik değil, aynı zamanda otelinizin vizyonuna yakışan bir deneyim sunarız.
+            </p>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Process Section */}
+      <AnimatedSection className="py-20 px-6 bg-gray-50" id="process">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+              Süreç Yönetimi
+            </div>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Nasıl Çalışıyoruz?</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Etkinlik günlerinde, otelinizin işleyişini aksatmadan, planlı ve saygılı bir biçimde çalışan firmamız ilk temastan teslim sürecine kadar tüm aşamalarda şeffaf ve çözüm odaklıdır.
+            </p>
+          </div>
+
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical Timeline Line for Desktop */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-pink-500 to-rose-600 hidden lg:block rounded-full"></div>
+            
+            <div className="space-y-8 lg:space-y-16">
+              {[
+                {
+                  step: "01",
+                  title: "İlk Görüşme",
+                  description: "Çift/kurumla tüm detayları netleştiririz.",
+                  icon: <Phone className="w-6 h-6" />,
+                  align: "right"
+                },
+                {
+                  step: "02",
+                  title: "Alan Keşfi",
+                  description: "Otelin yapısına göre planlama yaparız.",
+                  icon: <MapPin className="w-6 h-6" />,
+                  align: "left"
+                },
+                {
+                  step: "03",
+                  title: "Kurulum",
+                  description: "Belirlenen saatte hızlı ve sessiz kurulum yaparız.",
+                  icon: <Clock className="w-6 h-6" />,
+                  align: "right"
+                },
+                {
+                  step: "04",
+                  title: "Etkinlik Süreci",
+                  description: "Sürekli gözlemdeyiz, müdahale etmeyiz ama destek veririz.",
+                  icon: <Calendar className="w-6 h-6" />,
+                  align: "left"
+                },
+                {
+                  step: "05",
+                  title: "Toparlama",
+                  description: "Gecikmeden, temiz ve düzenli şekilde çıkış yaparız.",
+                  icon: <CheckCircle className="w-6 h-6" />,
+                  align: "right"
+                }
+              ].map((item, index) => (
+                <div key={index} className="relative">
+                  {/* Mobile Layout */}
+                  <div className="lg:hidden">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                          {item.icon}
+                        </div>
+                      </div>
+                      <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-sm">
+                            {item.step}
+                          </div>
+                          <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                        </div>
+                        <p className="text-gray-600">{item.description}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Desktop Layout */}
+                  <div className={`hidden lg:grid lg:grid-cols-2 lg:gap-8 items-center`}>
+                    {/* Left Content */}
+                    <div className={`${item.align === 'left' ? 'lg:order-2' : ''}`}>
+                      {item.align === 'right' ? (
+                        <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                          <div className="flex items-center gap-4 mb-3">
+                            <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold">
+                              {item.step}
+                            </div>
+                            <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                          </div>
+                          <p className="text-gray-600">{item.description}</p>
+                        </div>
+                      ) : (
+                        <div></div>
+                      )}
+                    </div>
+
+                    {/* Center Icon */}
+                    <div className={`${item.align === 'left' ? 'lg:order-1' : ''}`}>
+                      {item.align === 'left' ? (
+                        <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300 text-right">
+                          <div className="flex items-center gap-4 mb-3 justify-end">
+                            <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                            <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold">
+                              {item.step}
+                            </div>
+                          </div>
+                          <p className="text-gray-600">{item.description}</p>
+                        </div>
+                      ) : (
+                        <div></div>
+                      )}
+                    </div>
+
+                    {/* Timeline Icon - Positioned Absolutely */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 z-10">
+                      <div className="w-16 h-16 bg-white rounded-full p-1 shadow-xl">
+                        <div className="w-full h-full bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white">
+                          {item.icon}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Testimonials Section */}
+      <AnimatedSection className="py-20 bg-gradient-to-r from-pink-50 to-rose-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+              Referanslar
+            </div>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Müşteri Yorumları</h2>
+            <p className="text-gray-600">Bizimle çalışan otel ve müşterilerimizin görüşleri</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Hilton Istanbul Bomonti",
+                role: "Etkinlik Müdürü",
+                comment: "Solara Event ile çalışmak bir ayrıcalık. Profesyonel yaklaşımları ve detaylara gösterdikleri özen, otelimizin standartlarıyla mükemmel uyum sağlıyor.",
+                rating: 5
+              },
+              {
+                name: "Four Seasons Bosphorus",
+                role: "Genel Müdür Yardımcısı",
+                comment: "Organizasyon süreçlerinde gösterdikleri titizlik ve otel operasyonlarına saygılı yaklaşımları ile güvenilir bir iş ortağı.",
+                rating: 5
+              },
+              {
+                name: "Swissotel The Bosphorus",
+                role: "Banket Müdürü",
+                comment: "Kurulum ve söküm süreçlerindeki hızları ve düzenleri takdire şayan. Misafir memnuniyeti konusundaki hassasiyetleri bizim için çok değerli.",
+                rating: 5
+              }
+            ].map((item, index) => (
+              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className="flex mb-4">
+                    {[...Array(item.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-pink-400 text-pink-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 italic">"{item.comment}"</p>
+                  <div className="border-t pt-4">
+                    <div className="font-semibold text-gray-900">{item.name}</div>
+                    <div className="text-sm text-gray-500">{item.role}</div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* CTA Section */}
+      <AnimatedSection className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">
+            Bizimle yürüttüğünüz her etkinlik,
+            <br />
+            <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+              markalaşmış bir hizmet izlenimi yaratır
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Hayalinizdeki organizasyonu birlikte gerçekleştirelim
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+              Hemen İletişime Geç
+            </Button>
+            <Button size="lg" variant="outline" className="border-pink-500 text-pink-600 hover:bg-pink-50">
+              Portfolyo
+            </Button>
           </div>
         </div>
       </AnimatedSection>
 
       {/* Contact Section */}
-      <AnimatedSection className="py-16 px-6 bg-black text-white">
+      <AnimatedSection className="py-20 px-6 bg-gradient-to-br from-gray-900 to-black text-white" id="contact">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Get in touch</h2>
-              <p className="text-gray-300 mb-8">
-                Projeleriniz için bizimle iletişime geçin. Size en uygun çözümü birlikte bulalım.
+              <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6">
+                İletişim
+              </div>
+              <h2 className="text-4xl font-bold mb-6">Detaylı Bilgi ve İşbirliği İçin</h2>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                Profesyonel organizasyon hizmetlerimiz hakkında detaylı bilgi almak ve işbirliği fırsatlarını değerlendirmek için bizimle iletişime geçebilirsiniz.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5" />
-                  <span>+90 212 555 0123</span>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-pink-400 font-semibold mb-3">Etkinlik Direktörü</h3>
+                  <div className="space-y-2">
+                    <p className="text-white font-medium">Selin Ertan Özyurt</p>
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Phone className="w-4 h-4" />
+                      <span>+90 532 373 51 11</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5" />
-                  <span>info@refit.com.tr</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5" />
-                  <span>İstanbul, Türkiye</span>
-                </div>
-              </div>
 
-              <div className="flex gap-4">
-                <Instagram className="w-6 h-6" />
-                <Facebook className="w-6 h-6" />
-                <Twitter className="w-6 h-6" />
+                <div>
+                  <h3 className="text-pink-400 font-semibold mb-3">Ticari İlişkiler</h3>
+                  <div className="space-y-2">
+                    <p className="text-white font-medium">Berkan Özyurt</p>
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Phone className="w-4 h-4" />
+                      <span>+90 533 168 42 07</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-white/20">
+                  <div className="flex items-center gap-3 text-gray-300 mb-3">
+                    <Mail className="w-4 h-4" />
+                    <span>info@solaraevent.com</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Instagram className="w-4 h-4" />
+                    <span>@solaraevent</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg">
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900">Teklif Formu</h3>
               <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <Input placeholder="Adınız" className="text-black" />
                   <Input placeholder="Soyadınız" className="text-black" />
                 </div>
-                <Input placeholder="E-posta adresiniz" className="text-black" />
-                <Input placeholder="Telefon numaranız" className="text-black" />
-                <Textarea placeholder="Mesajınız" rows={4} className="text-black" />
-                <Button className="w-full bg-black text-white hover:bg-gray-800">Mesaj Gönder</Button>
+                <Input placeholder="Firma Adı (Kurumsal)" className="text-black" />
+                <Input placeholder="E-posta adresiniz" type="email" className="text-black" />
+                <Input placeholder="Telefon numaranız" type="tel" className="text-black" />
+                <select className="w-full px-3 py-2 border border-gray-300 rounded-md text-black">
+                  <option value="">Etkinlik Türü Seçiniz</option>
+                  <option value="wedding">Düğün</option>
+                  <option value="engagement">Nişan / Söz</option>
+                  <option value="corporate">Kurumsal Etkinlik</option>
+                  <option value="gala">Gala / Ödül Töreni</option>
+                  <option value="launch">Açılış / Lansman</option>
+                  <option value="other">Diğer</option>
+                </select>
+                <Input placeholder="Tahmini Kişi Sayısı" type="number" className="text-black" />
+                <Input placeholder="Etkinlik Tarihi" type="date" className="text-black" />
+                <Textarea placeholder="Etkinlik detayları ve özel istekleriniz..." rows={4} className="text-black" />
+                <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+                  Teklif Talebi Gönder
+                </Button>
               </form>
             </div>
           </div>
@@ -470,45 +594,49 @@ export default function HomePage() {
       <footer className="bg-black text-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
-                <span className="font-semibold text-lg">Refit</span>
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-bold text-xl">Solara Event & Organization</span>
               </div>
-              <p className="text-gray-400 text-sm">
-                İç mekan tasarımında uzman ekibimizle hayalinizdeki yaşam alanını gerçeğe dönüştürün.
+              <p className="text-gray-400 text-sm mb-4">
+                Profesyonel etkinlik organizasyonlarında güvenilir çözüm ortağınız.
               </p>
+              <div className="flex gap-4">
+                <a href="https://instagram.com/solaraevent" className="hover:text-pink-400 transition-colors">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="mailto:info@solaraevent.com" className="hover:text-pink-400 transition-colors">
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
             </div>
+            
             <div>
-              <h3 className="font-semibold mb-4">Hizmetler</h3>
+              <h3 className="font-semibold mb-4 text-pink-400">Hizmetler</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>İç Mekan Tasarımı</li>
-                <li>Bahçe Peyzajı</li>
-                <li>Banyo Yenileme</li>
-                <li>Mutfak Tasarımı</li>
+                <li>Düğün Organizasyonu</li>
+                <li>Kurumsal Etkinlikler</li>
+                <li>Gala & Ödül Törenleri</li>
+                <li>Özel Gün Kutlamaları</li>
               </ul>
             </div>
+            
             <div>
-              <h3 className="font-semibold mb-4">Şirket</h3>
+              <h3 className="font-semibold mb-4 text-pink-400">İletişim</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Hakkımızda</li>
-                <li>Projeler</li>
-                <li>Ekibimiz</li>
-                <li>İletişim</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">İletişim</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>+90 212 555 0123</li>
-                <li>info@refit.com.tr</li>
-                <li>İstanbul, Türkiye</li>
+                <li>info@solaraevent.com</li>
+                <li>+90 532 373 51 11</li>
+                <li>+90 533 168 42 07</li>
+                <li>@solaraevent</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Refit. Tüm hakları saklıdır.</p>
+            <p>&copy; 2024 Solara Event & Organization. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </footer>
