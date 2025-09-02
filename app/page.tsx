@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Award, Calendar, CheckCircle, Clock, HeartHandshake, Instagram, Mail, MapPin, Phone, Sparkles, Star, Users } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -15,10 +16,14 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30 transition-all duration-300">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-white" />
+          <div className="w-16 h-16 relative">
+            <Image 
+              src="/logo.png" 
+              alt="Solara Event Logo" 
+              fill
+              className="object-contain"
+            />
           </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">Solara Event</span>
         </div>
         <div className="hidden md:flex items-center gap-8">
           <a href="/hakkinda" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
@@ -571,8 +576,13 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-white" />
+                <div className="w-16 h-16 relative">
+                  <Image 
+                    src="/logo.png" 
+                    alt="Solara Event Logo" 
+                    fill
+                    className="object-contain filter invert"
+                  />
                 </div>
                 <span className="font-bold text-xl">Solara Event & Organization</span>
               </div>

@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { AnimatedSection } from "@/components/animated-section"
 import { Lock, Unlock, Sparkles, Home } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 export default function AdminPage() {
@@ -43,10 +44,14 @@ export default function AdminPage() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-white" />
+          <div className="w-16 h-16 relative">
+            <Image 
+              src="/logo.png" 
+              alt="Solara Event Logo" 
+              fill
+              className="object-contain"
+            />
           </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">Solara Event</span>
         </Link>
         <Link href="/" className="text-gray-700 hover:text-[#BCA88D] transition-colors flex items-center gap-2">
           <Home className="w-4 h-4" />
@@ -58,7 +63,7 @@ export default function AdminPage() {
         <AnimatedSection>
           <Card className="border-[#BCA88D]/30 shadow-xl">
             <CardHeader className="bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
-              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent flex items-center gap-2"
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent flex items-center gap-2">
                 <Lock className="w-6 h-6" />
                 Yönetici Paneli
               </CardTitle>
