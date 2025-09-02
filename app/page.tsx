@@ -1,82 +1,77 @@
+import { AnimatedCounter } from "@/components/animated-counter"
+import { AnimatedSection } from "@/components/animated-section"
+import { ServicesAccordion } from "@/components/services-accordion"
+import StructuredData from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { AnimatedCounter } from "@/components/animated-counter"
-import { ServicesAccordion } from "@/components/services-accordion"
-import { Star, Phone, Mail, MapPin, Instagram, Users, Award, Building, Calendar, CheckCircle, Sparkles, Clock, HeartHandshake } from "lucide-react"
-import { AnimatedSection } from "@/components/animated-section"
-import StructuredData from "@/components/structured-data"
+import { Award, Calendar, CheckCircle, Clock, HeartHandshake, Instagram, Mail, MapPin, Phone, Sparkles, Star, Users } from "lucide-react"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <StructuredData />
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-pink-50 to-rose-50 backdrop-blur-sm border-b border-pink-200/30 transition-all duration-300">
+      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30 transition-all duration-300">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Solara Event</span>
+          <span className="font-bold text-xl bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">Solara Event</span>
         </div>
         <div className="hidden md:flex items-center gap-8">
-          <a href="/hakkinda" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <a href="/hakkinda" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             Hakkında
           </a>
-          <a href="#about" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <a href="#about" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             Biz Kimiz
           </a>
-          <a href="#services" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <a href="#services" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             Hizmetler
           </a>
-          <a href="#why-us" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <a href="#why-us" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             Neden Biz
           </a>
-          <a href="#process" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <a href="#process" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             Nasıl Çalışıyoruz
           </a>
-          <a href="#contact" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <a href="#contact" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             İletişim
           </a>
         </div>
-        <Button className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white border-0">
+        <Button className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white border-0">
           Teklif Al
         </Button>
       </nav>
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-rose-50 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#F2EDD1] via-[#F9CB99] to-white"></div>
         
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full py-12">
             {/* Left Content */}
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6 shadow-lg">
-                <Sparkles className="w-4 h-4 text-pink-500" />
+              <div className="inline-flex items-center gap- bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6 shadow-lg">
+                <Sparkles className="w-4 h-4 text-[#BCA88D]" />
                 <span className="text-gray-700">Kurumsal & Bireysel Organizasyonlar</span>
               </div>
-              
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
-                  Profesyonel Etkinlik Organizasyonu
-                </span>
-                <br />
                 <span className="text-gray-900">O an'ı tam da hayal ettiğiniz</span>
                 <br />
                 <span className="text-gray-900">gibi yaşayın</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 max-w-xl">
-                Antalya'da düğün organizasyonu, kurumsal etkinlik ve özel gün organizasyonlarında uzman ekibimizle, hayalinizdeki özel günleri gerçeğe dönüştürüyoruz. <a href="#services" className="text-pink-600 hover:text-pink-700 underline">Hizmetlerimizi keşfedin</a> ve <a href="#contact" className="text-pink-600 hover:text-pink-700 underline">ücretsiz teklif alın</a>.
+                Antalya'da düğün organizasyonu, kurumsal etkinlik ve özel gün organizasyonlarında uzman ekibimizle, hayalinizdeki özel günleri gerçeğe dönüştürüyoruz. <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">Hizmetlerimizi keşfedin</a> ve <a href="#contact" className="text-[#BCA88D] hover:text-[#8B7355] underline">ücretsiz teklif alın</a>.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+                <Button size="lg" className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white">
                   Hemen Başlayalım
                 </Button>
-                <Button size="lg" variant="outline" className="border-pink-500 text-pink-600 hover:bg-pink-50">
+                <Button size="lg" variant="outline" className="border-[#BCA88D] text-[#BCA88D] hover:bg-[#F2EDD1]">
                   Projelerimiz
                 </Button>
               </div>
@@ -84,15 +79,15 @@ export default function HomePage() {
               {/* Stats Preview */}
               <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-600 mb-1">500+</div>
+                  <div className="text-3xl font-bold text-[#BCA88D] mb-1">500+</div>
                   <div className="text-sm text-gray-600">Başarılı Etkinlik</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-600 mb-1">50+</div>
+                  <div className="text-3xl font-bold text-[#BCA88D] mb-1">50+</div>
                   <div className="text-sm text-gray-600">Otel İş Ortağı</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-600 mb-1">15</div>
+                  <div className="text-3xl font-bold text-[#BCA88D] mb-1">15</div>
                   <div className="text-sm text-gray-600">Yıllık Deneyim</div>
                 </div>
               </div>
@@ -112,8 +107,8 @@ export default function HomePage() {
                 </div>
                 
                 {/* Background Decoration */}
-                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-pink-200 to-rose-300 rounded-full opacity-20"></div>
-                <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-pink-300 to-rose-400 rounded-full opacity-30"></div>
+                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-[#F9CB99] to-[#F2EDD1] rounded-full opacity-20"></div>
+                <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-[#F2EDD1] to-[#F9CB99] rounded-full opacity-30"></div>
               </div>
             </div>
           </div>
@@ -125,25 +120,25 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+              <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
                 Biz Kimiz?
               </div>
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 Antalya'nın En Güvenilir Etkinlik Organizasyon Firması
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Solara Event, Antalya'da <a href="#services" className="text-pink-600 hover:text-pink-700 underline">düğün organizasyonu</a>, <a href="#services" className="text-pink-600 hover:text-pink-700 underline">kurumsal etkinlik organizasyonu</a> ve özel gün kutlamalarında profesyonel hizmet veren bir organizasyon firmasıdır.
+                Solara Event, Antalya'da <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">düğün organizasyonu</a>, <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">kurumsal etkinlik organizasyonu</a> ve özel gün kutlamalarında profesyonel hizmet veren bir organizasyon firmasıdır.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Amacımız sadece "güzel bir gün" değil, <strong>unutulmaz deneyimler</strong> sunmak. Bu yolda, <a href="#why-us" className="text-pink-600 hover:text-pink-700 underline">iş ortaklığı yaptığımız otellerin</a> itibarı ve müşteri memnuniyeti bizim için daima ön plandadır.
+                Amacımız sadece "güzel bir gün" değil, <strong>unutulmaz deneyimler</strong> sunmak. Bu yolda, <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">iş ortaklığı yaptığımız otellerin</a> itibarı ve müşteri memnuniyeti bizim için daima ön plandadır.
               </p>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <CheckCircle className="w-5 h-5 text-[#BCA88D]" />
                   <span className="text-sm text-gray-700">Profesyonel Ekip</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-pink-500" />
+                  <CheckCircle className="w-5 h-5 text-[#BCA88D]" />
                   <span className="text-sm text-gray-700">%100 Memnuniyet</span>
                 </div>
               </div>
@@ -166,11 +161,11 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Stats Section */}
-      <AnimatedSection className="py-16 bg-gradient-to-r from-pink-50 to-rose-50">
+      <AnimatedSection className="py-16 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-pink-600">
+              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
                 <AnimatedCounter end={500} suffix="+" />
               </div>
               <div className="text-gray-700 font-medium">
@@ -181,7 +176,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-pink-600">
+              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
                 <AnimatedCounter end={50} suffix="+" />
               </div>
               <div className="text-gray-700 font-medium">
@@ -192,7 +187,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-pink-600">
+              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
                 <AnimatedCounter end={15} />
               </div>
               <div className="text-gray-700 font-medium">
@@ -203,7 +198,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-pink-600">
+              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
                 <AnimatedCounter end={100} suffix="%" />
               </div>
               <div className="text-gray-700 font-medium">
@@ -221,12 +216,12 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-6" id="services">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
               Hizmetlerimiz
             </div>
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Antalya Etkinlik Organizasyon Hizmetlerimiz</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              <a href="#about" className="text-pink-600 hover:text-pink-700 underline">15 yıllık deneyimimizle</a> bireysel ve kurumsal tüm organizasyon ihtiyaçlarınız için profesyonel çözümler sunuyoruz. <a href="#contact" className="text-pink-600 hover:text-pink-700 underline">Ücretsiz danışmanlık</a> için bizimle iletişime geçin.
+              <a href="#about" className="text-[#BCA88D] hover:text-[#8B7355] underline">15 yıllık deneyimimizle</a> bireysel ve kurumsal tüm organizasyon ihtiyaçlarınız için profesyonel çözümler sunuyoruz. <a href="#contact" className="text-[#BCA88D] hover:text-[#8B7355] underline">Ücretsiz danışmanlık</a> için bizimle iletişime geçin.
             </p>
           </div>
 
@@ -235,45 +230,45 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Why Us Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-br from-pink-900 to-rose-900 text-white" id="why-us">
+      <AnimatedSection className="py-20 bg-gradient-to-br from-[#8B7355] to-[#6B5B47] text-white" id="why-us">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6">
               Neden Biz?
             </div>
             <h2 className="text-4xl font-bold mb-4">Neden Antalya'nın En Güvenilir Etkinlik Organizasyon Firması?</h2>
-            <p className="text-pink-100 max-w-3xl mx-auto leading-relaxed">
-              Solara Event olarak, <a href="#process" className="text-pink-300 hover:text-pink-200 underline">otel operasyonlarına %100 uyum sağlayan</a> bir organizasyon anlayışıyla çalışıyoruz. <a href="#about" className="text-pink-300 hover:text-pink-200 underline">500+ başarılı etkinlik</a> deneyimimizle yanınızdayız.
+            <p className="text-[#F9CB99] max-w-3xl mx-auto leading-relaxed">
+              Solara Event olarak, <a href="#process" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">otel operasyonlarına %100 uyum sağlayan</a> bir organizasyon anlayışıyla çalışıyoruz. <a href="#about" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">500+ başarılı etkinlik</a> deneyimimizle yanınızdayız.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Profesyonel Düğün ve Etkinlik Ekibi</h3>
-              <p className="text-pink-200 leading-relaxed">
-                Sessizce gelir, zarafetle kurulumunu yapar ve otelden ayrılır. <a href="#process" className="text-pink-300 hover:text-pink-200 underline">Çalışma sürecimizi</a> öğrenin.
+              <p className="text-[#F2EDD1] leading-relaxed">
+                Sessizce gelir, zarafetle kurulumunu yapar ve otelden ayrılır. <a href="#process" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">Çalışma sürecimizi</a> öğrenin.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Antalya Otellerinde Kusursuz Uyum</h3>
-              <p className="text-pink-200 leading-relaxed">
-                Kurulumdan çıkışa kadar tüm süreci, otelin akışını aksatmadan, hızlı ve düzenli tamamlarız. <a href="#about" className="text-pink-300 hover:text-pink-200 underline">50+ otel iş ortağımızla</a> çalışıyoruz.
+              <p className="text-[#F2EDD1] leading-relaxed">
+                Kurulumdan çıkışa kadar tüm süreci, otelin akışını aksatmadan, hızlı ve düzenli tamamlarız. <a href="#about" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">50+ otel iş ortağımızla</a> çalışıyoruz.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <HeartHandshake className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Çift Taraflı Memnuniyet</h3>
-              <p className="text-pink-200 leading-relaxed">
+              <p className="text-[#F2EDD1] leading-relaxed">
                 Misafir memnuniyeti kadar, iş ortağımız olan otellerin huzuru ve düzeni de önceliğimizdir.
               </p>
             </div>
@@ -281,7 +276,7 @@ export default function HomePage() {
 
           <div className="mt-12 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <p className="text-center text-lg leading-relaxed">
-              <span className="text-pink-300 font-semibold">Profesyonelliğinizi Tamamlayan İş Ortağı:</span> Solara Event, otelinizin organizasyon süreçlerindeki profesyonel duruşunu güçlendiren bir çözüm ortağıdır. Misafirleriniz için sadece kusursuz bir etkinlik değil, aynı zamanda otelinizin vizyonuna yakışan bir deneyim sunarız.
+              <span className="text-[#F2EDD1] font-semibold">Profesyonelliğinizi Tamamlayan İş Ortağı:</span> Solara Event, otelinizin organizasyon süreçlerindeki profesyonel duruşunu güçlendiren bir çözüm ortağıdır. Misafirleriniz için sadece kusursuz bir etkinlik değil, aynı zamanda otelinizin vizyonuna yakışan bir deneyim sunarız.
             </p>
           </div>
         </div>
@@ -291,18 +286,18 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-6 bg-gray-50" id="process">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
               Süreç Yönetimi
             </div>
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Antalya Etkinlik Organizasyon Sürecimiz</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Etkinlik günlerinde, otelinizin işleyişini aksatmadan, planlı ve saygılı bir biçimde çalışan firmamız ilk temastan teslim sürecine kadar tüm aşamalarda şeffaf ve çözüm odaklıdır. <a href="#why-us" className="text-pink-600 hover:text-pink-700 underline">Neden bizi tercih etmelisiniz?</a> <a href="#contact" className="text-pink-600 hover:text-pink-700 underline">Detaylı bilgi alın.</a>
+              Etkinlik günlerinde, otelinizin işleyişini aksatmadan, planlı ve saygılı bir biçimde çalışan firmamız ilk temastan teslim sürecine kadar tüm aşamalarda şeffaf ve çözüm odaklıdır. <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">Neden bizi tercih etmelisiniz?</a> <a href="#contact" className="text-[#BCA88D] hover:text-[#8B7355] underline">Detaylı bilgi alın.</a>
             </p>
           </div>
 
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical Timeline Line for Desktop */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-pink-500 to-rose-600 hidden lg:block rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#BCA88D] to-[#8B7355] hidden lg:block rounded-full"></div>
             
             <div className="space-y-8 lg:space-y-16">
               {[
@@ -347,13 +342,13 @@ export default function HomePage() {
                   <div className="lg:hidden">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <div className="w-14 h-14 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center text-white shadow-lg">
                           {item.icon}
                         </div>
                       </div>
                       <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg">
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold text-sm">
+                          <div className="w-10 h-10 bg-[#F2EDD1] rounded-full flex items-center justify-center text-[#BCA88D] font-bold text-sm">
                             {item.step}
                           </div>
                           <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
@@ -370,7 +365,7 @@ export default function HomePage() {
                       {item.align === 'right' ? (
                         <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                           <div className="flex items-center gap-4 mb-3">
-                            <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold">
+                            <div className="w-12 h-12 bg-[#F2EDD1] rounded-full flex items-center justify-center text-[#BCA88D] font-bold">
                               {item.step}
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
@@ -388,7 +383,7 @@ export default function HomePage() {
                         <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300 text-right">
                           <div className="flex items-center gap-4 mb-3 justify-end">
                             <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                            <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 font-bold">
+                            <div className="w-12 h-12 bg-[#F2EDD1] rounded-full flex items-center justify-center text-[#BCA88D] font-bold">
                               {item.step}
                             </div>
                           </div>
@@ -402,7 +397,7 @@ export default function HomePage() {
                     {/* Timeline Icon - Positioned Absolutely */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 z-10">
                       <div className="w-16 h-16 bg-white rounded-full p-1 shadow-xl">
-                        <div className="w-full h-full bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white">
+                        <div className="w-full h-full bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center text-white">
                           {item.icon}
                         </div>
                       </div>
@@ -416,14 +411,14 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Testimonials Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-r from-pink-50 to-rose-50">
+      <AnimatedSection className="py-20 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
               Referanslar
             </div>
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Antalya Otel ve Müşteri Referansları</h2>
-            <p className="text-gray-600">Bizimle çalışan <a href="#why-us" className="text-pink-600 hover:text-pink-700 underline">Antalya'nın prestijli otelleri</a> ve mutlu müşterilerimizin görüşleri</p>
+            <p className="text-gray-600">Bizimle çalışan <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">Antalya'nın prestijli otelleri</a> ve mutlu müşterilerimizin görüşleri</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -451,7 +446,7 @@ export default function HomePage() {
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-pink-400 text-pink-400" />
+                      <Star key={i} className="w-5 h-5 fill-[#F9CB99] text-[#F9CB99]" />
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 italic">"{item.comment}"</p>
@@ -472,18 +467,18 @@ export default function HomePage() {
           <h2 className="text-4xl font-bold mb-4 text-gray-900">
             Antalya'da Profesyonel Etkinlik Organizasyonu
             <br />
-            <span className="bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">
               Hayalinizdeki düğün ve etkinliği gerçekleştirin
             </span>
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            <a href="#services" className="text-pink-600 hover:text-pink-700 underline">Düğün organizasyonu</a>, <a href="#services" className="text-pink-600 hover:text-pink-700 underline">kurumsal etkinlik</a> ve özel gün organizasyonlarında hayalinizdeki etkinliği birlikte gerçekleştirelim
+            <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">Düğün organizasyonu</a>, <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">kurumsal etkinlik</a> ve özel gün organizasyonlarında hayalinizdeki etkinliği birlikte gerçekleştirelim
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+            <Button size="lg" className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-pink-600 hover:to-rose-700 text-white">
               Hemen İletişime Geç
             </Button>
-            <Button size="lg" variant="outline" className="border-pink-500 text-pink-600 hover:bg-pink-50">
+            <Button size="lg" variant="outline" className="border-[#BCA88D] text-[#BCA88D] hover:bg-[#F2EDD1]">
               Portfolyo
             </Button>
           </div>
@@ -500,12 +495,12 @@ export default function HomePage() {
               </div>
               <h2 className="text-4xl font-bold mb-6">Antalya Etkinlik Organizasyonu İletişim</h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                <a href="#services" className="text-pink-300 hover:text-pink-200 underline">Düğün organizasyonu</a>, <a href="#services" className="text-pink-300 hover:text-pink-200 underline">kurumsal etkinlik</a> ve <a href="#about" className="text-pink-300 hover:text-pink-200 underline">profesyonel organizasyon hizmetlerimiz</a> hakkında detaylı bilgi almak ve işbirliği fırsatlarını değerlendirmek için bizimle iletişime geçebilirsiniz.
+                <a href="#services" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">Düğün organizasyonu</a>, <a href="#services" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">kurumsal etkinlik</a> ve <a href="#about" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">profesyonel organizasyon hizmetlerimiz</a> hakkında detaylı bilgi almak ve işbirliği fırsatlarını değerlendirmek için bizimle iletişime geçebilirsiniz.
               </p>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-pink-400 font-semibold mb-3">Düğün ve Etkinlik Direktörü</h3>
+                  <h3 className="text-[#F9CB99] font-semibold mb-3">Düğün ve Etkinlik Direktörü</h3>
                   <div className="space-y-2">
                     <p className="text-white font-medium">Selin Ertan Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
@@ -516,7 +511,7 @@ export default function HomePage() {
                 </div>
 
                 <div>
-                  <h3 className="text-pink-400 font-semibold mb-3">Kurumsal Etkinlik ve Ticari İlişkiler</h3>
+                  <h3 className="text-[#F9CB99] font-semibold mb-3">Kurumsal Etkinlik ve Ticari İlişkiler</h3>
                   <div className="space-y-2">
                     <p className="text-white font-medium">Berkan Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
@@ -561,7 +556,7 @@ export default function HomePage() {
                 <Input placeholder="Tahmini Kişi Sayısı" type="number" className="text-black" />
                 <Input placeholder="Etkinlik Tarihi" type="date" className="text-black" />
                 <Textarea placeholder="Etkinlik detayları ve özel istekleriniz..." rows={4} className="text-black" />
-                <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+                <Button className="w-full bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-pink-600 hover:to-rose-700 text-white">
                   Teklif Talebi Gönder
                 </Button>
               </form>
@@ -576,7 +571,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-bold text-xl">Solara Event & Organization</span>
@@ -585,50 +580,50 @@ export default function HomePage() {
                 Profesyonel etkinlik organizasyonlarında güvenilir çözüm ortağınız.
               </p>
               <div className="flex gap-4">
-                <a href="https://instagram.com/solaraevent" className="hover:text-pink-400 transition-colors">
+                <a href="https://instagram.com/solaraevent" className="hover:text-[#F9CB99] transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="mailto:info@solaraevent.com" className="hover:text-pink-400 transition-colors">
+                <a href="mailto:info@solaraevent.com" className="hover:text-[#F9CB99] transition-colors">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4 text-pink-400">Hizmetlerimiz</h3>
+              <h3 className="font-semibold mb-4 text-[#F9CB99]">Hizmetlerimiz</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#services" className="hover:text-pink-400 transition-colors">Antalya Düğün Organizasyonu</a></li>
-                <li><a href="#services" className="hover:text-pink-400 transition-colors">Kurumsal Etkinlik Organizasyonu</a></li>
-                <li><a href="#services" className="hover:text-pink-400 transition-colors">Gala & Ödül Töreni Organizasyonu</a></li>
-                <li><a href="#services" className="hover:text-pink-400 transition-colors">Nişan ve Söz Töreni</a></li>
-                <li><a href="#services" className="hover:text-pink-400 transition-colors">Özel Gün Kutlamaları</a></li>
+                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Antalya Düğün Organizasyonu</a></li>
+                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Kurumsal Etkinlik Organizasyonu</a></li>
+                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Gala & Ödül Töreni Organizasyonu</a></li>
+                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Nişan ve Söz Töreni</a></li>
+                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Özel Gün Kutlamaları</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4 text-pink-400">Kurumsal</h3>
+              <h3 className="font-semibold mb-4 text-[#F9CB99]">Kurumsal</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#about" className="hover:text-pink-400 transition-colors">Hakkımızda</a></li>
-                <li><a href="#why-us" className="hover:text-pink-400 transition-colors">Neden Biz?</a></li>
-                <li><a href="#process" className="hover:text-pink-400 transition-colors">Çalışma Sürecimiz</a></li>
-                <li><a href="#contact" className="hover:text-pink-400 transition-colors">İletişim</a></li>
-                <li><a href="#contact" className="hover:text-pink-400 transition-colors">Ücretsiz Teklif</a></li>
+                <li><a href="#about" className="hover:text-[#F9CB99] transition-colors">Hakkımızda</a></li>
+                <li><a href="#why-us" className="hover:text-[#F9CB99] transition-colors">Neden Biz?</a></li>
+                <li><a href="#process" className="hover:text-[#F9CB99] transition-colors">Çalışma Sürecimiz</a></li>
+                <li><a href="#contact" className="hover:text-[#F9CB99] transition-colors">İletişim</a></li>
+                <li><a href="#contact" className="hover:text-[#F9CB99] transition-colors">Ücretsiz Teklif</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4 text-pink-400">İletişim</h3>
+              <h3 className="font-semibold mb-4 text-[#F9CB99]">İletişim</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="mailto:info@solaraevent.com" className="hover:text-pink-400 transition-colors">info@solaraevent.com</a></li>
-                <li><a href="tel:+905323735111" className="hover:text-pink-400 transition-colors">+90 532 373 51 11</a></li>
-                <li><a href="tel:+905331684207" className="hover:text-pink-400 transition-colors">+90 533 168 42 07</a></li>
-                <li><a href="https://instagram.com/solaraevent" className="hover:text-pink-400 transition-colors">@solaraevent</a></li>
+                <li><a href="mailto:info@solaraevent.com" className="hover:text-[#F9CB99] transition-colors">info@solaraevent.com</a></li>
+                <li><a href="tel:+905323735111" className="hover:text-[#F9CB99] transition-colors">+90 532 373 51 11</a></li>
+                <li><a href="tel:+905331684207" className="hover:text-[#F9CB99] transition-colors">+90 533 168 42 07</a></li>
+                <li><a href="https://instagram.com/solaraevent" className="hover:text-[#F9CB99] transition-colors">@solaraevent</a></li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Solara Event & Organization. Tüm hakları saklıdır. | <a href="#services" className="hover:text-pink-400 transition-colors">Antalya Düğün Organizasyonu</a> | <a href="#services" className="hover:text-pink-400 transition-colors">Kurumsal Etkinlik Organizasyonu</a></p>
+            <p>&copy; 2024 Solara Event & Organization. Tüm hakları saklıdır. | <a href="#services" className="hover:text-[#F9CB99] transition-colors">Antalya Düğün Organizasyonu</a> | <a href="#services" className="hover:text-[#F9CB99] transition-colors">Kurumsal Etkinlik Organizasyonu</a></p>
           </div>
         </div>
       </footer>

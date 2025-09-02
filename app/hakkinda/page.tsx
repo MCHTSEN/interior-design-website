@@ -98,8 +98,8 @@ export default function AboutPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-white flex items-center justify-center">
-        <Loader2 className="w-8 h-8 text-pink-600 animate-spin" />
+      <div className="min-h-screen bg-gradient-to-br from-[#F2EDD1] via-[#F9CB99] to-white flex items-center justify-center">
+        <Loader2 className="w-8 h-8 text-[#BCA88D] animate-spin" />
       </div>
     )
   }
@@ -107,21 +107,21 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-pink-50 to-rose-50 backdrop-blur-sm border-b border-pink-200/30 transition-all duration-300">
+      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30 transition-all duration-300">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Solara Event</span>
+          <span className="font-bold text-xl bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">Solara Event</span>
         </Link>
         <div className="flex items-center gap-4">
-          <Link href="/" className="text-gray-700 hover:text-pink-600 transition-colors">
+          <Link href="/" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
             Ana Sayfa
           </Link>
           {isAdmin && !isEditMode && (
             <Button
               onClick={handleEdit}
-              className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white"
+              className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white"
             >
               <Edit className="w-4 h-4 mr-2" />
               Düzenle
@@ -136,7 +136,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           {isEditMode ? (
             <AnimatedSection>
-              <div className="bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+              <div className="bg-white rounded-3xl shadow-xl p-8 border border-[#F2EDD1]">
                 <h2 className="text-2xl font-bold mb-6 text-gray-900">İçeriği Düzenle</h2>
                 
                 <div className="space-y-6">
@@ -154,7 +154,7 @@ export default function AboutPage() {
                       />
                       <label
                         htmlFor="image-upload"
-                        className="cursor-pointer flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white rounded-xl transition-all shadow-lg hover:shadow-xl"
+                        className="cursor-pointer flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white rounded-xl transition-all shadow-lg hover:shadow-xl"
                       >
                         <Upload className="w-5 h-5" />
                         Fotoğraf Seç
@@ -190,7 +190,7 @@ export default function AboutPage() {
                     <Textarea
                       value={tempContent.description}
                       onChange={(e) => setTempContent({ ...tempContent, description: e.target.value })}
-                      className="min-h-[250px] border-pink-200 focus:border-pink-400 text-lg"
+                      className="min-h-[250px] border-[#F2EDD1] focus:border-[#BCA88D] text-lg"
                       placeholder="Hakkımızda açıklaması..."
                     />
                   </div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
               <AnimatedSection>
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
                   <div>
-                    <div className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm mb-6">
+                    <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
                       Hakkımda
                     </div>
                     <h2 className="text-4xl font-bold mb-6 text-gray-900">
@@ -240,8 +240,8 @@ export default function AboutPage() {
                     
                     <div className="grid grid-cols-2 gap-4 mt-8">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
-                          <CheckCircle className="w-6 h-6 text-pink-600" />
+                        <div className="w-12 h-12 bg-[#F2EDD1] rounded-xl flex items-center justify-center">
+                          <CheckCircle className="w-6 h-6 text-[#BCA88D]" />
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900">Profesyonel Yaklaşım</div>
@@ -249,8 +249,8 @@ export default function AboutPage() {
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
-                          <Star className="w-6 h-6 text-pink-600" />
+                        <div className="w-12 h-12 bg-[#F2EDD1] rounded-xl flex items-center justify-center">
+                          <Star className="w-6 h-6 text-[#BCA88D]" />
                         </div>
                         <div>
                           <div className="font-semibold text-gray-900">%100 Memnuniyet</div>
@@ -280,17 +280,17 @@ export default function AboutPage() {
 
               {/* Stats Section */}
               <AnimatedSection>
-                <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-3xl p-12">
+                <div className="bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] rounded-3xl p-12">
                   <h3 className="text-3xl font-bold text-center mb-12 text-gray-900">
                     Deneyimim
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div className="text-center">
                       <div className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center mx-auto mb-4">
                           <Calendar className="w-8 h-8 text-white" />
                         </div>
-                        <div className="text-4xl font-bold text-pink-600 mb-2">
+                        <div className="text-4xl font-bold text-[#BCA88D] mb-2">
                           <AnimatedCounter end={500} suffix="+" />
                         </div>
                         <div className="text-gray-700 font-medium">Düzenlediğim Etkinlik</div>
@@ -298,10 +298,10 @@ export default function AboutPage() {
                     </div>
                     <div className="text-center">
                       <div className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center mx-auto mb-4">
                           <Building className="w-8 h-8 text-white" />
                         </div>
-                        <div className="text-4xl font-bold text-pink-600 mb-2">
+                        <div className="text-4xl font-bold text-[#BCA88D] mb-2">
                           <AnimatedCounter end={50} suffix="+" />
                         </div>
                         <div className="text-gray-700 font-medium">İş Ortağım</div>
@@ -309,10 +309,10 @@ export default function AboutPage() {
                     </div>
                     <div className="text-center">
                       <div className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center mx-auto mb-4">
                           <Award className="w-8 h-8 text-white" />
                         </div>
-                        <div className="text-4xl font-bold text-pink-600 mb-2">
+                        <div className="text-4xl font-bold text-[#BCA88D] mb-2">
                           <AnimatedCounter end={15} />
                         </div>
                         <div className="text-gray-700 font-medium">Yıllık Deneyimim</div>
@@ -320,10 +320,10 @@ export default function AboutPage() {
                     </div>
                     <div className="text-center">
                       <div className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center mx-auto mb-4">
                           <Users className="w-8 h-8 text-white" />
                         </div>
-                        <div className="text-4xl font-bold text-pink-600 mb-2">
+                        <div className="text-4xl font-bold text-[#BCA88D] mb-2">
                           <AnimatedCounter end={100} suffix="%" />
                         </div>
                         <div className="text-gray-700 font-medium">Memnuniyet</div>
@@ -339,8 +339,8 @@ export default function AboutPage() {
                   Çalışma Prensiplerim
                 </h3>
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-pink-100 hover:shadow-xl transition-shadow">
-                    <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-6">
+                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#F2EDD1] hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-xl flex items-center justify-center mb-6">
                       <HeartHandshake className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-xl font-bold mb-3 text-gray-900">Güven & Şeffaflık</h4>
@@ -348,8 +348,8 @@ export default function AboutPage() {
                       Müşterilerimle kurduğum güven ilişkisi ve şeffaf iletişim anlayışım ile her adımda yanınızdayım.
                     </p>
                   </div>
-                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-pink-100 hover:shadow-xl transition-shadow">
-                    <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-6">
+                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#F2EDD1] hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-xl flex items-center justify-center mb-6">
                       <Award className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-xl font-bold mb-3 text-gray-900">Kalite & Mükemmellik</h4>
@@ -357,8 +357,8 @@ export default function AboutPage() {
                       Her detayda mükemmelliği hedefleyen yaklaşımımla, beklentilerinizi aşan organizasyonlar yaratıyorum.
                     </p>
                   </div>
-                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-pink-100 hover:shadow-xl transition-shadow">
-                    <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-6">
+                  <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#F2EDD1] hover:shadow-xl transition-shadow">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-xl flex items-center justify-center mb-6">
                       <Sparkles className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-xl font-bold mb-3 text-gray-900">Yaratıcılık & İnovasyon</h4>
@@ -375,7 +375,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       {!isEditMode && (
-        <AnimatedSection className="py-20 bg-gradient-to-r from-pink-50 to-rose-50">
+        <AnimatedSection className="py-20 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
           <div className="max-w-4xl mx-auto text-center px-6">
             <h2 className="text-4xl font-bold mb-6 text-gray-900">
               Hayalinizdeki Organizasyonu Birlikte Yaşatalım
@@ -385,12 +385,12 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/#contact">
-                <Button size="lg" className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white">
+                <Button size="lg" className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white">
                   Ücretsiz Teklif Al
                 </Button>
               </Link>
               <Link href="/#services">
-                <Button size="lg" variant="outline" className="border-pink-500 text-pink-600 hover:bg-pink-50">
+                <Button size="lg" variant="outline" className="border-[#BCA88D] text-[#BCA88D] hover:bg-[#F2EDD1]">
                   Hizmetlerimizi İncele
                 </Button>
               </Link>

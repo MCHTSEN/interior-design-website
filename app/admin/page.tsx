@@ -39,16 +39,16 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#F2EDD1] via-[#F9CB99] to-white">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-pink-50 to-rose-50 backdrop-blur-sm border-b border-pink-200/30">
+      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
-          <span className="font-bold text-xl bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Solara Event</span>
+          <span className="font-bold text-xl bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">Solara Event</span>
         </Link>
-        <Link href="/" className="text-gray-700 hover:text-pink-600 transition-colors flex items-center gap-2">
+        <Link href="/" className="text-gray-700 hover:text-[#BCA88D] transition-colors flex items-center gap-2">
           <Home className="w-4 h-4" />
           Ana Sayfa
         </Link>
@@ -56,9 +56,9 @@ export default function AdminPage() {
 
       <div className="max-w-md mx-auto px-6 py-12">
         <AnimatedSection>
-          <Card className="border-pink-200/30 shadow-xl">
-            <CardHeader className="bg-gradient-to-r from-pink-50 to-rose-50">
-              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent flex items-center gap-2">
+          <Card className="border-[#BCA88D]/30 shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent flex items-center gap-2"
                 <Lock className="w-6 h-6" />
                 Yönetici Paneli
               </CardTitle>
@@ -79,7 +79,7 @@ export default function AdminPage() {
                       onChange={(e) => setPassword(e.target.value)}
                       onKeyPress={(e) => e.key === "Enter" && handleLogin()}
                       placeholder="Şifrenizi girin"
-                      className="border-pink-200 focus:border-pink-400"
+                      className="border-[#F2EDD1] focus:border-[#BCA88D]"
                     />
                     {error && (
                       <p className="text-red-500 text-sm mt-2">{error}</p>
@@ -87,7 +87,7 @@ export default function AdminPage() {
                   </div>
                   <Button
                     onClick={handleLogin}
-                    className="w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white"
+                    className="w-full bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white"
                   >
                     <Unlock className="w-4 h-4 mr-2" />
                     Giriş Yap
@@ -109,7 +109,7 @@ export default function AdminPage() {
                     <div className="space-y-2">
                       <Link
                         href="/hakkinda"
-                        className="block w-full text-left px-4 py-2 bg-pink-50 hover:bg-pink-100 rounded-lg transition-colors text-pink-700"
+                        className="block w-full text-left px-4 py-2 bg-[#F2EDD1] hover:bg-[#F9CB99] rounded-lg transition-colors text-[#BCA88D]"
                       >
                         → Hakkında Sayfası
                       </Link>
