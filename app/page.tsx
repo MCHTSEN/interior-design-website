@@ -153,19 +153,24 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Mevcut fotoğrafları ve yeni eklenecek fotoğrafları burada göstereceğiz */}
+            {/* Optimized project images with lazy loading */}
             {[
               "/hero-1.JPEG", "/hero-2.JPEG", "/hero-3.JPEG", "/hero-4.JPEG",
               "/biz_kimiz_1.JPG", "/biz_kimiz_2.JPG", "/biz_kimiz_3.JPG", "/biz_kimiz_4.JPG",
               "/yerli-yabanci-dugun.JPG", "/bayi-toplantilari.JPG", "/egitim-motivasyon-kamp.JPG",
-              // Daha fazla fotoğraf eklenecek
             ].map((src, index) => (
               <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-square relative">
-                  <img
+                <div className="aspect-square relative bg-gray-200 animate-pulse">
+                  <Image
                     src={src}
                     alt={`Proje ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading={index < 6 ? "eager" : "lazy"}
+                    priority={index < 3}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300"></div>
                 </div>
