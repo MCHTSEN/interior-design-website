@@ -40,9 +40,9 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#F2EDD1] via-[#F9CB99] to-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-white">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30">
+      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-gray-100 to-gray-200 backdrop-blur-sm border-b border-gray-400/30">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-16 h-16 relative">
             <Image 
@@ -53,7 +53,7 @@ export default function AdminPage() {
             />
           </div>
         </Link>
-        <Link href="/" className="text-gray-700 hover:text-[#BCA88D] transition-colors flex items-center gap-2">
+        <Link href="/" className="text-gray-700 hover:text-black transition-colors flex items-center gap-2">
           <Home className="w-4 h-4" />
           Ana Sayfa
         </Link>
@@ -61,9 +61,9 @@ export default function AdminPage() {
 
       <div className="max-w-md mx-auto px-6 py-12">
         <AnimatedSection>
-          <Card className="border-[#BCA88D]/30 shadow-xl">
-            <CardHeader className="bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
-              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent flex items-center gap-2">
+          <Card className="border-gray-400/30 shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-gray-100 to-gray-200">
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-gray-600 to-black bg-clip-text text-transparent flex items-center gap-2">
                 <Lock className="w-6 h-6" />
                 Yönetici Paneli
               </CardTitle>
@@ -84,7 +84,7 @@ export default function AdminPage() {
                       onChange={(e) => setPassword(e.target.value)}
                       onKeyPress={(e) => e.key === "Enter" && handleLogin()}
                       placeholder="Şifrenizi girin"
-                      className="border-[#F2EDD1] focus:border-[#BCA88D]"
+                      className="border-gray-200 focus:border-black"
                     />
                     {error && (
                       <p className="text-red-500 text-sm mt-2">{error}</p>
@@ -92,7 +92,7 @@ export default function AdminPage() {
                   </div>
                   <Button
                     onClick={handleLogin}
-                    className="w-full bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white"
+                    className="w-full bg-gradient-to-r from-gray-600 to-black hover:from-gray-700 hover:to-gray-900 text-white"
                   >
                     <Unlock className="w-4 h-4 mr-2" />
                     Giriş Yap
@@ -114,7 +114,7 @@ export default function AdminPage() {
                     <div className="space-y-2">
                       <Link
                         href="/hakkinda"
-                        className="block w-full text-left px-4 py-2 bg-[#F2EDD1] hover:bg-[#F9CB99] rounded-lg transition-colors text-[#BCA88D]"
+                        className="block w-full text-left px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors text-black"
                       >
                         → Hakkında Sayfası
                       </Link>

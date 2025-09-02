@@ -1,5 +1,6 @@
 import { AnimatedCounter } from "@/components/animated-counter"
 import { AnimatedSection } from "@/components/animated-section"
+import { AboutSection } from "@/components/about-section"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { ServicesAccordion } from "@/components/services-accordion"
 import StructuredData from "@/components/structured-data"
@@ -211,55 +212,7 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Solara Event</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                Selin Özyurt tarafından kurulan Solara Event, özel anları benzersiz deneyimlere dönüştürme vizyonuyla hayata geçirildi.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Bilkent Üniversitesi Siyaset Bilimi ve Kamu Yönetimi mezuniyetinin ardından, kurumsal iş hayatında 5 yıl boyunca edindiği deneyimi yaratıcılığıyla harmanlayan Selin Özyurt, etkinlik sektöründe kişiye özel tasarımları merkeze alan bir anlayış geliştirdi.
-              </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Antalya'nın büyüleyici atmosferinden ilham alan Solara Event, düğünlerden kurumsal organizasyonlara kadar her anı, tamamen size özgü detaylarla tasarlayarak unutulmaz bir deneyime dönüştürür.
-              </p>
-
-              {/* İstatistikler */}
-              <div className="grid grid-cols-3 gap-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-black mb-2">
-                    <AnimatedCounter end={500} suffix="+" />
-                  </div>
-                  <div className="text-sm text-gray-600">Başarılı Etkinlik</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-black mb-2">
-                    <AnimatedCounter end={50} suffix="+" />
-                  </div>
-                  <div className="text-sm text-gray-600">Otel İş Ortağı</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-black mb-2">
-                    <AnimatedCounter end={100} suffix="%" />
-                  </div>
-                  <div className="text-sm text-gray-600">Memnuniyet</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Fotoğraf Grid */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <img src="/biz_kimiz_1.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
-                  <img src="/biz_kimiz_2.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
-                </div>
-                <div className="space-y-4 pt-8">
-                  <img src="/biz_kimiz_3.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
-                  <img src="/biz_kimiz_4.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <AboutSection />
         </div>
       </AnimatedSection>
 

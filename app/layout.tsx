@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Open_Sans } from 'next/font/google'
+import { FloatingSocialButtons } from '@/components/FloatingSocialButtons'
 import './globals.css'
 
 const openSans = Open_Sans({
@@ -62,7 +63,10 @@ html {
 }
         `}</style>
       </head>
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        {children}
+        <FloatingSocialButtons />
+      </body>
     </html>
   )
 }
