@@ -186,3 +186,29 @@
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scroll-testimonials {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-testimonials {
+  animation: scroll-testimonials 30s linear infinite;
+}
+
+.animate-scroll-testimonials:hover {
+  animation-play-state: paused;
+}

@@ -416,7 +416,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Testimonials Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
+      <AnimatedSection className="py-20 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
@@ -426,28 +426,52 @@ export default function HomePage() {
             <p className="text-gray-600">Bizimle çalışan <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">Antalya'nın prestijli otelleri</a> ve mutlu müşterilerimizin görüşleri</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex gap-6 animate-scroll-testimonials">
             {[
               {
-                name: "Hilton Istanbul Bomonti",
-                role: "Etkinlik Müdürü",
-                comment: "Solara Event ile çalışmak bir ayrıcalık. Profesyonel yaklaşımları ve detaylara gösterdikleri özen, otelimizin standartlarıyla mükemmel uyum sağlıyor.",
+                name: "Ece D.",
+                role: "Düğün Organizasyonu",
+                comment: "Erdal İnönü Parkındaki düğünümüzün organizasyonu ile Solara event Selin Hanım ilgilendi, her detayı tam istediğimiz gibiydi 🥹❤️ çok ilgili ve zevkli birisi bence 😍",
                 rating: 5
               },
               {
-                name: "Four Seasons Bosphorus",
-                role: "Genel Müdür Yardımcısı",
-                comment: "Organizasyon süreçlerinde gösterdikleri titizlik ve otel operasyonlarına saygılı yaklaşımları ile güvenilir bir iş ortağı.",
+                name: "Hazal E.",
+                role: "Düğün Organizasyonu",
+                comment: "Düğün hazırlıkları sırasında en çok korktuğum şey stres ve aksaklık yaşamaktı. Selin Hanım sayesinde bu endişelerin hiçbiri gerçeğe dönüşmedi. Hayalini kurduğumuz tüm detayları gerçeğe dönüştürüp beklentimizin çok üzerine çıkarttı.",
                 rating: 5
               },
               {
-                name: "Swissotel The Bosphorus",
-                role: "Banket Müdürü",
-                comment: "Kurulum ve söküm süreçlerindeki hızları ve düzenleri takdire şayan. Misafir memnuniyeti konusundaki hassasiyetleri bizim için çok değerli.",
+                name: "Simge Ç.",
+                role: "Düğün Organizasyonu",
+                comment: "Selin Hanım'a emekleri için çok teşekkür ederiz. Her şeyle tek tek ilgilendi, biz hiçbir şeye kafa yormadan sadece günün tadını çıkardık. Misafirlerimiz de çok beğendi.",
+                rating: 5
+              },
+              {
+                name: "Utku I.",
+                role: "Düğün Organizasyonu",
+                comment: "Selin hanıma teşekkür ederiz. Otelde gerçekleşen 200 kişilik düğün töreninden oldukça memnun kaldık. Herkese tavsiye ederim.",
+                rating: 5
+              },
+              {
+                name: "Zeynep B.",
+                role: "Düğün Organizasyonu",
+                comment: "Selin Hanım'ın ilgisi ve alakasından çok memnun kaldık. Tüm sorularımıza en hızlı en güzel şekilde dönüş yaptı. Güvenle organizasyonlarınızı teslim edebilirsiniz.",
+                rating: 5
+              },
+              {
+                name: "Sezin O.",
+                role: "Nişan Organizasyonu",
+                comment: "Arkadaşımızın nişanı için Solara Event ile çalıştık ve ortaya çıkan sonuçtan çok memnun kaldık. Mekân düzenlemesi, çiçek tasarımları ve masa detayları tam hayal ettiğimiz gibi oldu.",
+                rating: 5
+              },
+              {
+                name: "Hatice Ö.",
+                role: "Özel Etkinlik",
+                comment: "Tüm hersey için çok teşekkür ederim size ve ekibinize 🙏🏻 hersey o kadar güzeldi ki tam hayal ettiğimiz gibi 🤍 sizlere ne gönderdiysek birebir aynısı olmuştu.",
                 rating: 5
               }
             ].map((item, index) => (
-              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300 flex-shrink-0 w-80">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(item.rating)].map((_, i) => (
