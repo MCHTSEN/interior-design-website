@@ -15,7 +15,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <StructuredData />
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] backdrop-blur-sm border-b border-[#BCA88D]/30 transition-all duration-300">
+      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-gray-100 to-gray-200 backdrop-blur-sm border-b border-gray-400/30 transition-all duration-300">
         <div className="flex items-center gap-3">
           <div className="w-16 h-16 relative">
             <Image 
@@ -27,33 +27,33 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hidden md:flex items-center gap-8">
-          <a href="/hakkinda" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
+          <a href="/hakkinda" className="text-gray-700 hover:text-black transition-colors">
             Hakkında
           </a>
-          <a href="#about" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
+          <a href="#about" className="text-gray-700 hover:text-black transition-colors">
             Biz Kimiz
           </a>
-          <a href="#services" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
+          <a href="#services" className="text-gray-700 hover:text-black transition-colors">
             Hizmetler
           </a>
-          <a href="#why-us" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
+          <a href="#why-us" className="text-gray-700 hover:text-black transition-colors">
             Neden Biz
           </a>
-          <a href="#process" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
+          <a href="#process" className="text-gray-700 hover:text-black transition-colors">
             Nasıl Çalışıyoruz
           </a>
-          <a href="#contact" className="text-gray-700 hover:text-[#BCA88D] transition-colors">
+          <a href="#contact" className="text-gray-700 hover:text-black transition-colors">
             İletişim
           </a>
         </div>
-        <Button className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white border-0">
+        <Button className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-gray-600 text-white border-0">
           Teklif Al
         </Button>
       </nav>
 
       {/* Hero Section */}
       <section className="relative h-screen md:h-[85vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#F2EDD1] via-[#F9CB99] to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-white"></div>
         <div className="relative z-10 h-full">
           <HeroCarousel />
         </div>
@@ -64,7 +64,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
+              <div className="inline-block bg-gradient-to-r from-black to-gray-800 text-white px-4 py-2 rounded-full text-sm mb-6">
                 Biz Kimiz?
               </div>
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
@@ -75,11 +75,11 @@ export default function HomePage() {
               </p>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-[#BCA88D]" />
+                  <CheckCircle className="w-5 h-5 text-black" />
                   <span className="text-sm text-gray-700">Profesyonel Ekip</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-[#BCA88D]" />
+                  <CheckCircle className="w-5 h-5 text-black" />
                   <span className="text-sm text-gray-700">%100 Memnuniyet</span>
                 </div>
               </div>
@@ -102,11 +102,11 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Stats Section */}
-      <AnimatedSection className="py-16 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]">
+      <AnimatedSection className="py-16 bg-gradient-to-r from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
+              <div className="text-4xl font-bold mb-2 text-black">
                 <AnimatedCounter end={500} suffix="+" />
               </div>
               <div className="text-gray-700 font-medium">
@@ -117,7 +117,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
+              <div className="text-4xl font-bold mb-2 text-black">
                 <AnimatedCounter end={50} suffix="+" />
               </div>
               <div className="text-gray-700 font-medium">
@@ -128,7 +128,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
+              <div className="text-4xl font-bold mb-2 text-black">
                 <AnimatedCounter end={15} />
               </div>
               <div className="text-gray-700 font-medium">
@@ -139,7 +139,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-4xl font-bold mb-2 text-[#BCA88D]">
+              <div className="text-4xl font-bold mb-2 text-black">
                 <AnimatedCounter end={100} suffix="%" />
               </div>
               <div className="text-gray-700 font-medium">
@@ -157,12 +157,12 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-6" id="services">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-block bg-gradient-to-r from-black to-gray-800 text-white px-4 py-2 rounded-full text-sm mb-6">
               Hizmetlerimiz
             </div>
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Antalya Etkinlik Organizasyon Hizmetlerimiz</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              <a href="#about" className="text-[#BCA88D] hover:text-[#8B7355] underline">15 yıllık deneyimimizle</a> bireysel ve kurumsal tüm organizasyon ihtiyaçlarınız için profesyonel çözümler sunuyoruz. <a href="#contact" className="text-[#BCA88D] hover:text-[#8B7355] underline">Ücretsiz danışmanlık</a> için bizimle iletişime geçin.
+              <a href="#about" className="text-black hover:text-gray-700 underline">15 yıllık deneyimimizle</a> bireysel ve kurumsal tüm organizasyon ihtiyaçlarınız için profesyonel çözümler sunuyoruz. <a href="#contact" className="text-black hover:text-gray-700 underline">Ücretsiz danışmanlık</a> için bizimle iletişime geçin.
             </p>
           </div>
 
@@ -171,45 +171,45 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Why Us Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-br from-[#8B7355] to-[#6B5B47] text-white" id="why-us">
+      <AnimatedSection className="py-20 bg-gradient-to-br from-gray-800 to-black text-white" id="why-us">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6">
               Neden Biz?
             </div>
             <h2 className="text-4xl font-bold mb-4">Neden Antalya'nın En Güvenilir Etkinlik Organizasyon Firması?</h2>
-            <p className="text-[#F9CB99] max-w-3xl mx-auto leading-relaxed">
-              Solara Event olarak, <a href="#process" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">otel operasyonlarına %100 uyum sağlayan</a> bir organizasyon anlayışıyla çalışıyoruz. <a href="#about" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">500+ başarılı etkinlik</a> deneyimimizle yanınızdayız.
+            <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Solara Event olarak, <a href="#process" className="text-gray-200 hover:text-gray-100 underline">otel operasyonlarına %100 uyum sağlayan</a> bir organizasyon anlayışıyla çalışıyoruz. <a href="#about" className="text-gray-200 hover:text-gray-100 underline">500+ başarılı etkinlik</a> deneyimimizle yanınızdayız.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-black rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Profesyonel Düğün ve Etkinlik Ekibi</h3>
-              <p className="text-[#F2EDD1] leading-relaxed">
-                Sessizce gelir, zarafetle kurulumunu yapar ve otelden ayrılır. <a href="#process" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">Çalışma sürecimizi</a> öğrenin.
+              <p className="text-gray-300 leading-relaxed">
+                Sessizce gelir, zarafetle kurulumunu yapar ve otelden ayrılır. <a href="#process" className="text-gray-200 hover:text-gray-100 underline">Çalışma sürecimizi</a> öğrenin.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-black rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Antalya Otellerinde Kusursuz Uyum</h3>
-              <p className="text-[#F2EDD1] leading-relaxed">
-                Kurulumdan çıkışa kadar tüm süreci, otelin akışını aksatmadan, hızlı ve düzenli tamamlarız. <a href="#about" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">50+ otel iş ortağımızla</a> çalışıyoruz.
+              <p className="text-gray-300 leading-relaxed">
+                Kurulumdan çıkışa kadar tüm süreci, otelin akışını aksatmadan, hızlı ve düzenli tamamlarız. <a href="#about" className="text-gray-200 hover:text-gray-100 underline">50+ otel iş ortağımızla</a> çalışıyoruz.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-600 to-black rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <HeartHandshake className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Çift Taraflı Memnuniyet</h3>
-              <p className="text-[#F2EDD1] leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 Misafir memnuniyeti kadar, iş ortağımız olan otellerin huzuru ve düzeni de önceliğimizdir.
               </p>
             </div>
@@ -217,7 +217,7 @@ export default function HomePage() {
 
           <div className="mt-12 p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
             <p className="text-center text-lg leading-relaxed">
-              <span className="text-[#F2EDD1] font-semibold">Profesyonelliğinizi Tamamlayan İş Ortağı:</span> Solara Event, otelinizin organizasyon süreçlerindeki profesyonel duruşunu güçlendiren bir çözüm ortağıdır. Misafirleriniz için sadece kusursuz bir etkinlik değil, aynı zamanda otelinizin vizyonuna yakışan bir deneyim sunarız.
+              <span className="text-gray-200 font-semibold">Profesyonelliğinizi Tamamlayan İş Ortağı:</span> Solara Event, otelinizin organizasyon süreçlerindeki profesyonel duruşunu güçlendiren bir çözüm ortağıdır. Misafirleriniz için sadece kusursuz bir etkinlik değil, aynı zamanda otelinizin vizyonuna yakışan bir deneyim sunarız.
             </p>
           </div>
         </div>
@@ -227,18 +227,18 @@ export default function HomePage() {
       <AnimatedSection className="py-20 px-6 bg-gray-50" id="process">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-block bg-gradient-to-r from-black to-gray-800 text-white px-4 py-2 rounded-full text-sm mb-6">
               Süreç Yönetimi
             </div>
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Antalya Etkinlik Organizasyon Sürecimiz</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Etkinlik günlerinde, otelinizin işleyişini aksatmadan, planlı ve saygılı bir biçimde çalışan firmamız ilk temastan teslim sürecine kadar tüm aşamalarda şeffaf ve çözüm odaklıdır. <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">Neden bizi tercih etmelisiniz?</a> <a href="#contact" className="text-[#BCA88D] hover:text-[#8B7355] underline">Detaylı bilgi alın.</a>
+              Etkinlik günlerinde, otelinizin işleyişini aksatmadan, planlı ve saygılı bir biçimde çalışan firmamız ilk temastan teslim sürecine kadar tüm aşamalarda şeffaf ve çözüm odaklıdır. <a href="#why-us" className="text-black hover:text-gray-700 underline">Neden bizi tercih etmelisiniz?</a> <a href="#contact" className="text-black hover:text-gray-700 underline">Detaylı bilgi alın.</a>
             </p>
           </div>
 
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical Timeline Line for Desktop */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#BCA88D] to-[#8B7355] hidden lg:block rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-gray-600 to-black hidden lg:block rounded-full"></div>
             
             <div className="space-y-8 lg:space-y-16">
               {[
@@ -283,13 +283,13 @@ export default function HomePage() {
                   <div className="lg:hidden">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="w-14 h-14 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center text-white shadow-lg">
+                        <div className="w-14 h-14 bg-gradient-to-br from-gray-600 to-black rounded-full flex items-center justify-center text-white shadow-lg">
                           {item.icon}
                         </div>
                       </div>
                       <div className="flex-1 bg-white rounded-2xl p-6 shadow-lg">
                         <div className="flex items-center gap-3 mb-2">
-                          <div className="w-10 h-10 bg-[#F2EDD1] rounded-full flex items-center justify-center text-[#BCA88D] font-bold text-sm">
+                          <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-black font-bold text-sm">
                             {item.step}
                           </div>
                           <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
@@ -306,7 +306,7 @@ export default function HomePage() {
                       {item.align === 'right' ? (
                         <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                           <div className="flex items-center gap-4 mb-3">
-                            <div className="w-12 h-12 bg-[#F2EDD1] rounded-full flex items-center justify-center text-[#BCA88D] font-bold">
+                            <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-black font-bold">
                               {item.step}
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
@@ -324,7 +324,7 @@ export default function HomePage() {
                         <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300 text-right">
                           <div className="flex items-center gap-4 mb-3 justify-end">
                             <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                            <div className="w-12 h-12 bg-[#F2EDD1] rounded-full flex items-center justify-center text-[#BCA88D] font-bold">
+                            <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-black font-bold">
                               {item.step}
                             </div>
                           </div>
@@ -338,7 +338,7 @@ export default function HomePage() {
                     {/* Timeline Icon - Positioned Absolutely */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 z-10">
                       <div className="w-16 h-16 bg-white rounded-full p-1 shadow-xl">
-                        <div className="w-full h-full bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center text-white">
+                        <div className="w-full h-full bg-gradient-to-br from-gray-600 to-black rounded-full flex items-center justify-center text-white">
                           {item.icon}
                         </div>
                       </div>
@@ -352,14 +352,14 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* Testimonials Section */}
-      <AnimatedSection className="py-20 bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] overflow-hidden">
+      <AnimatedSection className="py-20 bg-gradient-to-r from-gray-100 to-gray-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="inline-block bg-gradient-to-r from-[#BCA88D] to-[#8B7355] text-white px-4 py-2 rounded-full text-sm mb-6">
+            <div className="inline-block bg-gradient-to-r from-black to-gray-800 text-white px-4 py-2 rounded-full text-sm mb-6">
               Referanslar
             </div>
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Antalya Otel ve Müşteri Referansları</h2>
-            <p className="text-gray-600">Bizimle çalışan <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">Antalya'nın prestijli otelleri</a> ve mutlu müşterilerimizin görüşleri</p>
+            <p className="text-gray-600">Bizimle çalışan <a href="#why-us" className="text-black hover:text-gray-700 underline">Antalya'nın prestijli otelleri</a> ve mutlu müşterilerimizin görüşleri</p>
           </div>
 
           <div className="flex gap-6 animate-scroll-testimonials">
@@ -411,7 +411,7 @@ export default function HomePage() {
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-[#F9CB99] text-[#F9CB99]" />
+                      <Star key={i} className="w-5 h-5 fill-black text-black" />
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 italic">"{item.comment}"</p>
@@ -432,18 +432,18 @@ export default function HomePage() {
           <h2 className="text-4xl font-bold mb-4 text-gray-900">
             Antalya'da Profesyonel Etkinlik Organizasyonu
             <br />
-            <span className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-600 to-black bg-clip-text text-transparent">
               Hayalinizdeki düğün ve etkinliği gerçekleştirin
             </span>
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">Düğün organizasyonu</a>, <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">kurumsal etkinlik</a> ve özel gün organizasyonlarında hayalinizdeki etkinliği birlikte gerçekleştirelim
+            <a href="#services" className="text-black hover:text-gray-700 underline">Düğün organizasyonu</a>, <a href="#services" className="text-black hover:text-gray-700 underline">kurumsal etkinlik</a> ve özel gün organizasyonlarında hayalinizdeki etkinliği birlikte gerçekleştirelim
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-pink-600 hover:to-rose-700 text-white">
+            <Button size="lg" className="bg-gradient-to-r from-gray-600 to-black hover:from-gray-700 hover:to-gray-900 text-white">
               Hemen İletişime Geç
             </Button>
-            <Button size="lg" variant="outline" className="border-[#BCA88D] text-[#BCA88D] hover:bg-[#F2EDD1]">
+            <Button size="lg" variant="outline" className="border-black text-black hover:bg-gray-200">
               Portfolyo
             </Button>
           </div>
@@ -460,12 +460,12 @@ export default function HomePage() {
               </div>
               <h2 className="text-4xl font-bold mb-6">Antalya Etkinlik Organizasyonu İletişim</h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                <a href="#services" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">Düğün organizasyonu</a>, <a href="#services" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">kurumsal etkinlik</a> ve <a href="#about" className="text-[#F2EDD1] hover:text-[#F2EDD1] underline">profesyonel organizasyon hizmetlerimiz</a> hakkında detaylı bilgi almak ve işbirliği fırsatlarını değerlendirmek için bizimle iletişime geçebilirsiniz.
+                <a href="#services" className="text-gray-200 hover:text-gray-100 underline">Düğün organizasyonu</a>, <a href="#services" className="text-gray-200 hover:text-gray-100 underline">kurumsal etkinlik</a> ve <a href="#about" className="text-gray-200 hover:text-gray-100 underline">profesyonel organizasyon hizmetlerimiz</a> hakkında detaylı bilgi almak ve işbirliği fırsatlarını değerlendirmek için bizimle iletişime geçebilirsiniz.
               </p>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-[#F9CB99] font-semibold mb-3">Düğün ve Etkinlik Direktörü</h3>
+                  <h3 className="text-gray-300 font-semibold mb-3">Düğün ve Etkinlik Direktörü</h3>
                   <div className="space-y-2">
                     <p className="text-white font-medium">Selin Ertan Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
@@ -476,7 +476,7 @@ export default function HomePage() {
                 </div>
 
                 <div>
-                  <h3 className="text-[#F9CB99] font-semibold mb-3">Kurumsal Etkinlik ve Ticari İlişkiler</h3>
+                  <h3 className="text-gray-300 font-semibold mb-3">Kurumsal Etkinlik ve Ticari İlişkiler</h3>
                   <div className="space-y-2">
                     <p className="text-white font-medium">Berkan Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
@@ -521,7 +521,7 @@ export default function HomePage() {
                 <Input placeholder="Tahmini Kişi Sayısı" type="number" className="text-black" />
                 <Input placeholder="Etkinlik Tarihi" type="date" className="text-black" />
                 <Textarea placeholder="Etkinlik detayları ve özel istekleriniz..." rows={4} className="text-black" />
-                <Button className="w-full bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-pink-600 hover:to-rose-700 text-white">
+                <Button className="w-full bg-gradient-to-r from-gray-600 to-black hover:from-gray-700 hover:to-gray-900 text-white">
                   Teklif Talebi Gönder
                 </Button>
               </form>
@@ -550,50 +550,50 @@ export default function HomePage() {
                 Profesyonel etkinlik organizasyonlarında güvenilir çözüm ortağınız.
               </p>
               <div className="flex gap-4">
-                <a href="https://instagram.com/solaraevent" className="hover:text-[#F9CB99] transition-colors">
+                <a href="https://instagram.com/solaraevent" className="hover:text-gray-300 transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="mailto:info@solaraevent.com" className="hover:text-[#F9CB99] transition-colors">
+                <a href="mailto:info@solaraevent.com" className="hover:text-gray-300 transition-colors">
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4 text-[#F9CB99]">Hizmetlerimiz</h3>
+              <h3 className="font-semibold mb-4 text-gray-300">Hizmetlerimiz</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Antalya Düğün Organizasyonu</a></li>
-                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Kurumsal Etkinlik Organizasyonu</a></li>
-                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Gala & Ödül Töreni Organizasyonu</a></li>
-                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Nişan ve Söz Töreni</a></li>
-                <li><a href="#services" className="hover:text-[#F9CB99] transition-colors">Özel Gün Kutlamaları</a></li>
+                <li><a href="#services" className="hover:text-gray-300 transition-colors">Antalya Düğün Organizasyonu</a></li>
+                <li><a href="#services" className="hover:text-gray-300 transition-colors">Kurumsal Etkinlik Organizasyonu</a></li>
+                <li><a href="#services" className="hover:text-gray-300 transition-colors">Gala & Ödül Töreni Organizasyonu</a></li>
+                <li><a href="#services" className="hover:text-gray-300 transition-colors">Nişan ve Söz Töreni</a></li>
+                <li><a href="#services" className="hover:text-gray-300 transition-colors">Özel Gün Kutlamaları</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4 text-[#F9CB99]">Kurumsal</h3>
+              <h3 className="font-semibold mb-4 text-gray-300">Kurumsal</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#about" className="hover:text-[#F9CB99] transition-colors">Hakkımızda</a></li>
-                <li><a href="#why-us" className="hover:text-[#F9CB99] transition-colors">Neden Biz?</a></li>
-                <li><a href="#process" className="hover:text-[#F9CB99] transition-colors">Çalışma Sürecimiz</a></li>
-                <li><a href="#contact" className="hover:text-[#F9CB99] transition-colors">İletişim</a></li>
-                <li><a href="#contact" className="hover:text-[#F9CB99] transition-colors">Ücretsiz Teklif</a></li>
+                <li><a href="#about" className="hover:text-gray-300 transition-colors">Hakkımızda</a></li>
+                <li><a href="#why-us" className="hover:text-gray-300 transition-colors">Neden Biz?</a></li>
+                <li><a href="#process" className="hover:text-gray-300 transition-colors">Çalışma Sürecimiz</a></li>
+                <li><a href="#contact" className="hover:text-gray-300 transition-colors">İletişim</a></li>
+                <li><a href="#contact" className="hover:text-gray-300 transition-colors">Ücretsiz Teklif</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4 text-[#F9CB99]">İletişim</h3>
+              <h3 className="font-semibold mb-4 text-gray-300">İletişim</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="mailto:info@solaraevent.com" className="hover:text-[#F9CB99] transition-colors">info@solaraevent.com</a></li>
-                <li><a href="tel:+905323735111" className="hover:text-[#F9CB99] transition-colors">+90 532 373 51 11</a></li>
-                <li><a href="tel:+905331684207" className="hover:text-[#F9CB99] transition-colors">+90 533 168 42 07</a></li>
-                <li><a href="https://instagram.com/solaraevent" className="hover:text-[#F9CB99] transition-colors">@solaraevent</a></li>
+                <li><a href="mailto:info@solaraevent.com" className="hover:text-gray-300 transition-colors">info@solaraevent.com</a></li>
+                <li><a href="tel:+905323735111" className="hover:text-gray-300 transition-colors">+90 532 373 51 11</a></li>
+                <li><a href="tel:+905331684207" className="hover:text-gray-300 transition-colors">+90 533 168 42 07</a></li>
+                <li><a href="https://instagram.com/solaraevent" className="hover:text-gray-300 transition-colors">@solaraevent</a></li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Solara Event & Organization. Tüm hakları saklıdır. | <a href="#services" className="hover:text-[#F9CB99] transition-colors">Antalya Düğün Organizasyonu</a> | <a href="#services" className="hover:text-[#F9CB99] transition-colors">Kurumsal Etkinlik Organizasyonu</a></p>
+            <p>&copy; 2024 Solara Event & Organization. Tüm hakları saklıdır. | <a href="#services" className="hover:text-gray-300 transition-colors">Antalya Düğün Organizasyonu</a> | <a href="#services" className="hover:text-gray-300 transition-colors">Kurumsal Etkinlik Organizasyonu</a></p>
           </div>
         </div>
       </footer>

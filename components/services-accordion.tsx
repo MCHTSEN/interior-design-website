@@ -111,9 +111,9 @@ export function ServicesAccordion() {
     <div className="space-y-12">
       {services.map((category, categoryIndex) => (
         <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99] p-6 border-b border-[#BCA88D]/30">
+          <div className="bg-gradient-to-r from-gray-100 to-gray-200 p-6 border-b border-gray-400/30">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#BCA88D] to-[#8B7355] rounded-full flex items-center justify-center text-white">
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-black rounded-full flex items-center justify-center text-white">
                 {category.categoryIcon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900">{category.category}</h3>
@@ -130,8 +130,8 @@ export function ServicesAccordion() {
                     alt={category.items[categoryIndex === activeCategory ? activeService : 0].title}
                     className="w-full rounded-xl aspect-[4/3] object-cover shadow-lg"
                   />
-                  <div className="mt-4 p-4 bg-[#F2EDD1] rounded-xl">
-                    <p className="text-sm text-[#8B7355] font-medium text-center">
+                  <div className="mt-4 p-4 bg-gray-200 rounded-xl">
+                    <p className="text-sm text-gray-700 font-medium text-center">
                       Profesyonel ekibimizle hayalinizdeki organizasyonu gerçeğe dönüştürüyoruz
                     </p>
                   </div>
@@ -145,8 +145,8 @@ export function ServicesAccordion() {
                     key={serviceIndex} 
                     className={`border rounded-xl overflow-hidden transition-all duration-300 ${
                       categoryIndex === activeCategory && activeService === serviceIndex 
-                        ? 'border-[#BCA88D] shadow-lg' 
-                        : 'border-gray-200 hover:border-[#F9CB99]'
+                        ? 'border-black shadow-lg' 
+                        : 'border-gray-200 hover:border-gray-400'
                     }`}
                   >
                     <button
@@ -156,15 +156,15 @@ export function ServicesAccordion() {
                       }}
                       className={`w-full flex items-center justify-between p-4 text-left transition-colors ${
                         categoryIndex === activeCategory && activeService === serviceIndex 
-                          ? 'bg-gradient-to-r from-[#F2EDD1] to-[#F9CB99]' 
+                          ? 'bg-gradient-to-r from-gray-100 to-gray-200' 
                           : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg ${
                           categoryIndex === activeCategory && activeService === serviceIndex 
-                            ? 'bg-[#BCA88D] text-white' 
-                            : 'bg-[#F2EDD1] text-[#BCA88D]'
+                            ? 'bg-black text-white' 
+                            : 'bg-gray-200 text-black'
                         }`}>
                           {service.icon}
                         </div>
