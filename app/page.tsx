@@ -1,6 +1,7 @@
 import { AnimatedCounter } from "@/components/animated-counter"
 import { AnimatedSection } from "@/components/animated-section"
 import { AboutSection } from "@/components/about-section"
+import { ContactForm } from "@/components/contact-form"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { ServicesAccordion } from "@/components/services-accordion"
 import StructuredData from "@/components/structured-data"
@@ -284,34 +285,7 @@ export default function HomePage() {
             </div>
 
             {/* İletişim Formu */}
-            <div className="bg-white rounded-2xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">Teklif Formu</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <Input placeholder="Adınız" className="text-black" />
-                  <Input placeholder="Soyadınız" className="text-black" />
-                </div>
-                <Input placeholder="E-posta adresiniz" type="email" className="text-black" />
-                <Input placeholder="Telefon numaranız" type="tel" className="text-black" />
-                <select className="w-full px-3 py-2 border border-gray-300 rounded-md text-black">
-                  <option value="">Etkinlik Türü Seçiniz</option>
-                  <option value="wedding">Düğün</option>
-                  <option value="engagement">Nişan / Söz</option>
-                  <option value="corporate">Kurumsal Etkinlik</option>
-                  <option value="gala">Gala / Ödül Töreni</option>
-                  <option value="launch">Açılış / Lansman</option>
-                  <option value="birthday">Doğum Günü</option>
-                  <option value="babyshower">Baby Shower</option>
-                  <option value="other">Diğer</option>
-                </select>
-                <Input placeholder="Etkinlik Tarihi" type="date" className="text-black" />
-                <Input placeholder="Tahmini Kişi Sayısı" type="number" className="text-black" />
-                <Textarea placeholder="Etkinlik detayları ve özel istekleriniz..." rows={4} className="text-black" />
-                <Button className="w-full bg-gradient-to-r from-gray-600 to-black hover:from-gray-700 hover:to-gray-900 text-white">
-                  Teklif Talebi Gönder
-                </Button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </AnimatedSection>
