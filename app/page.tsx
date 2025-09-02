@@ -1,5 +1,6 @@
 import { AnimatedCounter } from "@/components/animated-counter"
 import { AnimatedSection } from "@/components/animated-section"
+import { HeroCarousel } from "@/components/hero-carousel"
 import { ServicesAccordion } from "@/components/services-accordion"
 import StructuredData from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
@@ -51,72 +52,10 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] overflow-hidden">
+      <section className="relative h-screen md:h-[85vh] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#F2EDD1] via-[#F9CB99] to-white"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 h-full flex items-center">
-          <div className="grid lg:grid-cols-2 gap-12 items-center w-full py-12">
-            {/* Left Content */}
-            <div className="relative z-10">
-              <div className="inline-flex items-center gap- bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6 shadow-lg">
-                <Sparkles className="w-4 h-4 text-[#BCA88D]" />
-                <span className="text-gray-700">Kurumsal & Bireysel Organizasyonlar</span>
-              </div>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-                <span className="text-gray-900">O an'ı tam da hayal ettiğiniz</span>
-                <br />
-                <span className="text-gray-900">gibi yaşayın</span>
-              </h1>
-              
-              <p className="text-xl text-gray-600 mb-8 max-w-xl">
-                Antalya'da düğün organizasyonu, kurumsal etkinlik ve özel gün organizasyonlarında uzman ekibimizle, hayalinizdeki özel günleri gerçeğe dönüştürüyoruz. <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">Hizmetlerimizi keşfedin</a> ve <a href="#contact" className="text-[#BCA88D] hover:text-[#8B7355] underline">ücretsiz teklif alın</a>.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-[#BCA88D] to-[#8B7355] hover:from-[#8B7355] hover:to-[#6B5B47] text-white">
-                  Hemen Başlayalım
-                </Button>
-                <Button size="lg" variant="outline" className="border-[#BCA88D] text-[#BCA88D] hover:bg-[#F2EDD1]">
-                  Projelerimiz
-                </Button>
-              </div>
-
-              {/* Stats Preview */}
-              <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#BCA88D] mb-1">500+</div>
-                  <div className="text-sm text-gray-600">Başarılı Etkinlik</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#BCA88D] mb-1">50+</div>
-                  <div className="text-sm text-gray-600">Otel İş Ortağı</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#BCA88D] mb-1">15</div>
-                  <div className="text-sm text-gray-600">Yıllık Deneyim</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative lg:order-2">
-              <div className="relative">
-                {/* Main Image */}
-                <div className="relative z-10 rounded-3xl">
-                  <img 
-                    src="/hero.JPG" 
-                    alt="Antalya düğün organizasyonu - Solara Event profesyonel etkinlik kurulumu" 
-                    className="w-4/5 mx-auto h-[540px] lg:h-[630px] object-cover rounded-3xl"
-                  />
-                  
-                </div>
-                
-                {/* Background Decoration */}
-                <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-[#F9CB99] to-[#F2EDD1] rounded-full opacity-20"></div>
-                <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-gradient-to-br from-[#F2EDD1] to-[#F9CB99] rounded-full opacity-30"></div>
-              </div>
-            </div>
-          </div>
+        <div className="relative z-10 h-full">
+          <HeroCarousel />
         </div>
       </section>
 
@@ -132,10 +71,7 @@ export default function HomePage() {
                 Antalya'nın En Güvenilir Etkinlik Organizasyon Firması
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Solara Event, Antalya'da <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">düğün organizasyonu</a>, <a href="#services" className="text-[#BCA88D] hover:text-[#8B7355] underline">kurumsal etkinlik organizasyonu</a> ve özel gün kutlamalarında profesyonel hizmet veren bir organizasyon firmasıdır.
-              </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Amacımız sadece "güzel bir gün" değil, <strong>unutulmaz deneyimler</strong> sunmak. Bu yolda, <a href="#why-us" className="text-[#BCA88D] hover:text-[#8B7355] underline">iş ortaklığı yaptığımız otellerin</a> itibarı ve müşteri memnuniyeti bizim için daima ön plandadır.
+                Antalya'da düğün, kurumsal etkinlik ve özel gün organizasyonlarınızda; hayallerinizi gerçeğe dönüştürüp unutulmaz anlara imza atıyoruz.
               </p>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
