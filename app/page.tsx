@@ -1,15 +1,12 @@
-import { AnimatedCounter } from "@/components/animated-counter"
-import { AnimatedSection } from "@/components/animated-section"
 import { AboutSection } from "@/components/about-section"
+import { AnimatedSection } from "@/components/animated-section"
 import { ContactForm } from "@/components/contact-form"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { ServicesAccordion } from "@/components/services-accordion"
 import StructuredData from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Award, Instagram, Mail, MapPin, Phone, Star, Users } from "lucide-react"
+import { Instagram, Mail, MapPin, Phone, Star } from "lucide-react"
 import Image from "next/image"
 
 export default function HomePage() {
@@ -238,7 +235,7 @@ export default function HomePage() {
                 <div>
                   <h4 className="text-gray-300 font-semibold mb-3">Düğün ve Etkinlik Direktörü</h4>
                   <div className="space-y-2">
-                    <p className="text-white font-medium">Selin Ertan Özyurt</p>
+                    <p className="text-white font-medium">Selin Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
                       <Phone className="w-4 h-4" />
                       <span>+90 532 373 51 11</span>
@@ -249,10 +246,9 @@ export default function HomePage() {
                 <div>
                   <h4 className="text-gray-300 font-semibold mb-3">Kurumsal Etkinlik ve Ticari İlişkiler</h4>
                   <div className="space-y-2">
-                    <p className="text-white font-medium">Berkan Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
                       <Phone className="w-4 h-4" />
-                      <span>+90 533 168 42 07</span>
+                      <span>İletişim için formumuzu kullanın</span>
                     </div>
                   </div>
                 </div>
