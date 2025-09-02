@@ -49,11 +49,8 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen md:h-[85vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-white"></div>
-        <div className="relative z-10 h-full">
-          <HeroCarousel />
-        </div>
+      <section className="relative h-screen overflow-hidden">
+        <HeroCarousel />
       </section>
 
       {/* 1. Hizmet Alanlarımız Section */}
