@@ -1,3 +1,5 @@
+"use client"
+
 import { AboutSection } from "@/components/about-section"
 import { AnimatedSection } from "@/components/animated-section"
 import { ContactForm } from "@/components/contact-form"
@@ -6,10 +8,78 @@ import { ServicesAccordion } from "@/components/services-accordion"
 import StructuredData from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Instagram, Mail, MapPin, Phone, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, Instagram, Mail, MapPin, Phone, Star } from "lucide-react"
 import Image from "next/image"
+import { useState, useEffect } from "react"
 
 export default function HomePage() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [isAutoPlay, setIsAutoPlay] = useState(true)
+
+  const testimonials = [
+    {
+      name: "Ece D.",
+      role: "Düğün Organizasyonu",
+      comment: "Erdal İnönü Parkındaki düğünümüzün organizasyonu ile Solara event Selin Hanım ilgilendi, her detayı tam istediğimiz gibiydi 🥹❤️",
+      rating: 5
+    },
+    {
+      name: "Hazal E.",
+      role: "Düğün Organizasyonu",
+      comment: "Düğün hazırlıkları sırasında en çok korktuğum şey stres ve aksaklık yaşamaktı. Selin Hanım sayesinde bu endişelerin hiçbiri gerçeğe dönüşmedi.",
+      rating: 5
+    },
+    {
+      name: "Simge Ç.",
+      role: "Düğün Organizasyonu",
+      comment: "Selin Hanım'a emekleri için çok teşekkür ederiz. Her şeyle tek tek ilgilendi, biz hiçbir şeye kafa yormadan sadece günün tadını çıkardık.",
+      rating: 5
+    },
+    {
+      name: "Utku I.",
+      role: "Düğün Organizasyonu",
+      comment: "Selin hanıma teşekkür ederiz. Otelde gerçekleşen 200 kişilik düğün töreninden oldukça memnun kaldık.",
+      rating: 5
+    },
+    {
+      name: "Zeynep B.",
+      role: "Düğün Organizasyonu",
+      comment: "Selin Hanım'ın ilgisi ve alakasından çok memnun kaldık. Tüm sorularımıza en hızlı en güzel şekilde dönüş yaptı.",
+      rating: 5
+    },
+    {
+      name: "Sezin O.",
+      role: "Nişan Organizasyonu",
+      comment: "Arkadaşımızın nişanı için Solara Event ile çalıştık ve ortaya çıkan sonuçtan çok memnun kaldık.",
+      rating: 5
+    }
+  ]
+
+  useEffect(() => {
+    if (!isAutoPlay) return
+    
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [isAutoPlay, testimonials.length])
+
+  const nextTestimonial = () => {
+    setIsAutoPlay(false)
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+  }
+
+  const prevTestimonial = () => {
+    setIsAutoPlay(false)
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
+
+  const goToTestimonial = (index: number) => {
+    setIsAutoPlay(false)
+    setCurrentTestimonial(index)
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <StructuredData />
@@ -142,45 +212,8 @@ export default function HomePage() {
           </div>
 
           {/* Müşteri Yorumları */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Ece D.",
-                role: "Düğün Organizasyonu",
-                comment: "Erdal İnönü Parkındaki düğünümüzün organizasyonu ile Solara event Selin Hanım ilgilendi, her detayı tam istediğimiz gibiydi 🥹❤️",
-                rating: 5
-              },
-              {
-                name: "Hazal E.",
-                role: "Düğün Organizasyonu",
-                comment: "Düğün hazırlıkları sırasında en çok korktuğum şey stres ve aksaklık yaşamaktı. Selin Hanım sayesinde bu endişelerin hiçbiri gerçeğe dönüşmedi.",
-                rating: 5
-              },
-              {
-                name: "Simge Ç.",
-                role: "Düğün Organizasyonu",
-                comment: "Selin Hanım'a emekleri için çok teşekkür ederiz. Her şeyle tek tek ilgilendi, biz hiçbir şeye kafa yormadan sadece günün tadını çıkardık.",
-                rating: 5
-              },
-              {
-                name: "Utku I.",
-                role: "Düğün Organizasyonu",
-                comment: "Selin hanıma teşekkür ederiz. Otelde gerçekleşen 200 kişilik düğün töreninden oldukça memnun kaldık.",
-                rating: 5
-              },
-              {
-                name: "Zeynep B.",
-                role: "Düğün Organizasyonu",
-                comment: "Selin Hanım'ın ilgisi ve alakasından çok memnun kaldık. Tüm sorularımıza en hızlı en güzel şekilde dönüş yaptı.",
-                rating: 5
-              },
-              {
-                name: "Sezin O.",
-                role: "Nişan Organizasyonu",
-                comment: "Arkadaşımızın nişanı için Solara Event ile çalıştık ve ortaya çıkan sonuçtan çok memnun kaldık.",
-                rating: 5
-              }
-            ].map((item, index) => (
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((item, index) => (
               <Card key={index} className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex mb-4">
@@ -196,6 +229,68 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Mobile Testimonial Slider */}
+          <div className="md:hidden">
+            <div className="relative">
+              {/* Navigation Arrows */}
+              <button 
+                onClick={prevTestimonial}
+                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+              >
+                <ChevronLeft className="w-5 h-5 text-gray-700" />
+              </button>
+              
+              <button 
+                onClick={nextTestimonial}
+                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+              >
+                <ChevronRight className="w-5 h-5 text-gray-700" />
+              </button>
+
+              {/* Testimonial Container */}
+              <div className="overflow-hidden">
+                <div 
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentTestimonial * 100}%)`
+                  }}
+                >
+                  {testimonials.map((item, index) => (
+                    <div key={index} className="w-full flex-shrink-0 px-2">
+                      <Card className="border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <CardContent className="p-6">
+                          <div className="flex mb-4">
+                            {[...Array(item.rating)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 fill-black text-black" />
+                            ))}
+                          </div>
+                          <p className="text-gray-600 mb-6 italic">"{item.comment}"</p>
+                          <div className="border-t pt-4">
+                            <div className="font-semibold text-gray-900">{item.name}</div>
+                            <div className="text-sm text-gray-500">{item.role}</div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dots Navigation */}
+              <div className="flex justify-center mt-4 gap-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToTestimonial(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                      index === currentTestimonial ? 'bg-black w-6' : 'bg-gray-300'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </AnimatedSection>

@@ -31,7 +31,33 @@ export function AboutSection() {
 
   return (
     <div className="grid md:grid-cols-2 gap-12 items-center">
-      <div>
+      {/* Mobile: Fotoğraf üstte */}
+      <div className="md:hidden flex justify-center order-1">
+        {aboutData.imageUrl ? (
+          <div className="w-96 h-96 rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src={aboutData.imageUrl} 
+              alt="Solara Event" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ) : (
+          // Varsayılan fotoğraf grid'i (eğer admin fotoğraf yüklemezse)
+          <div className="grid grid-cols-2 gap-4 max-w-sm">
+            <div className="space-y-4">
+              <img src="/biz_kimiz_1.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
+              <img src="/biz_kimiz_2.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
+            </div>
+            <div className="space-y-4 pt-8">
+              <img src="/biz_kimiz_3.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
+              <img src="/biz_kimiz_4.JPG" alt="Solara Event" className="rounded-2xl shadow-xl" />
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Metin kısmı */}
+      <div className="order-2 md:order-1">
         <div className="prose prose-gray max-w-none">
           {aboutData.description.split('\n').map((paragraph, index) => (
             <p key={index} className="text-gray-600 mb-6 leading-relaxed text-lg">
@@ -63,8 +89,8 @@ export function AboutSection() {
         </div>
       </div>
       
-      {/* Tek Fotoğraf */}
-      <div className="flex justify-center">
+      {/* Desktop: Fotoğraf sağda */}
+      <div className="hidden md:flex justify-center order-2">
         {aboutData.imageUrl ? (
           <div className="w-96 h-96 rounded-2xl overflow-hidden shadow-xl">
             <img 
