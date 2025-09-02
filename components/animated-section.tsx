@@ -11,7 +11,7 @@ interface AnimatedSectionProps {
 
 export function AnimatedSection({ children, className, id }: AnimatedSectionProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: "some", margin: "-100px" })
 
   const variants = {
     hidden: { opacity: 0, y: 20 },
