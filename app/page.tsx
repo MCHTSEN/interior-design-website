@@ -21,6 +21,9 @@ export default function HomePage() {
           <span className="font-bold text-xl bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Solara Event</span>
         </div>
         <div className="hidden md:flex items-center gap-8">
+          <a href="/hakkinda" className="text-gray-700 hover:text-pink-600 transition-colors">
+            Hakkında
+          </a>
           <a href="#about" className="text-gray-700 hover:text-pink-600 transition-colors">
             Biz Kimiz
           </a>
