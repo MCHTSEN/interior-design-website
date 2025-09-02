@@ -117,15 +117,25 @@ export default function HomePage() {
             <p className="text-gray-600">Güvenle çalıştığımız oteller ve mutlu müşterilerimizin değerlendirmeleri</p>
           </div>
 
-          {/* Otel Logoları - Placeholder */}
+          {/* Otel Logoları */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-center mb-8 text-gray-800">İş Ortağı Oteller</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-              {/* Otel logoları buraya eklenecek */}
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <div className="h-20 flex items-center justify-center text-gray-400">
-                    <Award className="w-12 h-12" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+              {[
+                { name: "Akra Hotels", logo: "/referans-oteller/akra.png" },
+                { name: "Club Hotel Sera", logo: "/referans-oteller/club-hotesera.png" },
+                { name: "Hotel Su", logo: "/referans-oteller/hotelsu.png" },
+                { name: "Kremlin Palace", logo: "/referans-oteller/kremlin-palace.png" },
+                { name: "Nirvana Hotels", logo: "/referans-oteller/nirvana.png" },
+                { name: "Titanic Hotels", logo: "/referans-oteller/titanic.png" }
+              ].map((hotel, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 w-full max-w-[200px]">
+                  <div className="h-20 flex items-center justify-center">
+                    <img 
+                      src={hotel.logo} 
+                      alt={hotel.name}
+                      className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
                   </div>
                 </div>
               ))}
