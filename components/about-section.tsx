@@ -10,7 +10,7 @@ interface AboutData {
 
 export function AboutSection() {
   const [aboutData, setAboutData] = useState<AboutData>({ 
-    description: "Selin Özyurt tarafından kurulan Solara Event, özel anları benzersiz deneyimlere dönüştürme vizyonuyla hayata geçirildi.\n\nBilkent Üniversitesi Siyaset Bilimi ve Kamu Yönetimi mezuniyetinin ardından, kurumsal iş hayatında 5 yıl boyunca edindiği deneyimi yaratıcılığıyla harmanlayan Selin Özyurt, etkinlik sektöründe kişiye özel tasarımları merkeze alan bir anlayış geliştirdi.\n\nAntalya'nın büyüleyici atmosferinden ilham alan Solara Event, düğünlerden kurumsal organizasyonlara kadar her anı, tamamen size özgü detaylarla tasarlayarak unutulmaz bir deneyime dönüştürür.",
+    description: "Selin Özyurt tarafından 2023 senesinde kurulan Solara Event, özel anları benzersiz deneyimlere dönüştürme vizyonuyla hayata geçirildi.\n\nBilkent Üniversitesi Siyaset Bilimi ve Kamu Yönetimi mezuniyetinin ardından, kurumsal iş hayatında 5 yıl boyunca edindiği deneyimi yaratıcılığıyla harmanlayan Selin Özyurt, etkinlik sektöründe kişiye özel tasarımları merkeze alan bir anlayış geliştirdi.\n\nAntalya'nın büyüleyici atmosferinden ilham alan Solara Event, düğünlerden kurumsal organizasyonlara kadar her anı, tamamen size özgü detaylarla tasarlayarak unutulmaz bir deneyime dönüştürür.",
     imageUrl: null 
   })
 
