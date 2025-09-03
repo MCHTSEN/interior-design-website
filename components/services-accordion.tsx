@@ -103,8 +103,8 @@ export function ServicesAccordion() {
               <div className="order-2 lg:order-1">
                 <div className="sticky top-4">
                   <img
-                    src={category.items[categoryIndex === activeCategory ? activeService : 0].image || "/placeholder.svg"}
-                    alt={category.items[categoryIndex === activeCategory ? activeService : 0].title}
+                    src={category.items[categoryIndex === activeCategory && activeService !== -1 ? activeService : 0]?.image || "/placeholder.svg"}
+                    alt={category.items[categoryIndex === activeCategory && activeService !== -1 ? activeService : 0]?.title || ""}
                     className="w-full rounded-xl aspect-[4/3] object-cover shadow-lg"
                   />
                   <div className="mt-4 p-4 bg-gray-200 rounded-xl">
