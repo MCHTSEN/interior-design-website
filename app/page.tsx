@@ -114,7 +114,10 @@ export default function HomePage() {
           </a>
         </div>
         <div className="flex items-center gap-2">
-          <Button className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-gray-600 text-white border-0">
+          <Button 
+            onClick={() => window.location.href = '#contact'}
+            className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-gray-600 text-white border-0"
+          >
             Teklif Al
           </Button>
           <button
@@ -390,15 +393,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div>
-                  <h4 className="text-gray-300 font-semibold mb-3">Kurumsal Etkinlik ve Ticari İlişkiler</h4>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3 text-gray-300">
-                      <Phone className="w-4 h-4" />
-                      <span>İletişim için formumuzu kullanın</span>
-                    </div>
-                  </div>
-                </div>
+             
 
                 <div className="pt-4 border-t border-white/20">
                   <div className="flex items-center gap-3 text-gray-300 mb-3">
