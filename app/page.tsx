@@ -383,7 +383,7 @@ export default function HomePage() {
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-gray-300 font-semibold mb-3">Düğün ve Etkinlik Direktörü</h4>
+                  <h4 className="text-gray-300 font-semibold mb-3">Kurucu ve Etkinlik Direktörü</h4>
                   <div className="space-y-2">
                     <p className="text-white font-medium">Selin Özyurt</p>
                     <div className="flex items-center gap-3 text-gray-300">
