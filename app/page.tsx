@@ -8,13 +8,14 @@ import { ServicesAccordion } from "@/components/services-accordion"
 import StructuredData from "@/components/structured-data"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ChevronLeft, ChevronRight, Instagram, Mail, MapPin, Phone, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, Instagram, Mail, MapPin, Menu, Phone, Star, X } from "lucide-react"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 
 export default function HomePage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [isAutoPlay, setIsAutoPlay] = useState(true)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const testimonials = [
     {
@@ -112,10 +113,61 @@ export default function HomePage() {
             İletişim
           </a>
         </div>
-        <Button className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-gray-600 text-white border-0">
-          Teklif Al
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button className="bg-gradient-to-r from-black to-gray-800 hover:from-gray-800 hover:to-gray-600 text-white border-0">
+            Teklif Al
+          </Button>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-300/50 transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-white shadow-lg z-50 border-b border-gray-200">
+          <div className="flex flex-col p-4 space-y-3">
+            <a 
+              href="#services" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-700 hover:text-black transition-colors py-2 px-3 rounded hover:bg-gray-100"
+            >
+              Hizmet Alanlarımız
+            </a>
+            <a 
+              href="#projects" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-700 hover:text-black transition-colors py-2 px-3 rounded hover:bg-gray-100"
+            >
+              Projeler
+            </a>
+            <a 
+              href="#references" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-700 hover:text-black transition-colors py-2 px-3 rounded hover:bg-gray-100"
+            >
+              Referanslar
+            </a>
+            <a 
+              href="#about" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-700 hover:text-black transition-colors py-2 px-3 rounded hover:bg-gray-100"
+            >
+              Hakkımızda
+            </a>
+            <a 
+              href="#contact" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-700 hover:text-black transition-colors py-2 px-3 rounded hover:bg-gray-100"
+            >
+              İletişim
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
@@ -183,13 +235,12 @@ export default function HomePage() {
             <div className="inline-block bg-gradient-to-r from-black to-gray-800 text-white px-4 py-2 rounded-full text-sm mb-6">
               Referanslar
             </div>
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">İş Ortaklarımız ve Müşteri Görüşleri</h2>
-            <p className="text-gray-600">Güvenle çalıştığımız oteller ve mutlu müşterilerimizin değerlendirmeleri</p>
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Tecrübelerimiz ve Müşteri Görüşleri</h2>
+       
           </div>
 
           {/* Otel Logoları */}
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-center mb-8 text-gray-800">İş Ortağı Oteller</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
               {[
                 { name: "Akra Hotels", logo: "/referans-oteller/akra.png" },
