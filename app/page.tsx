@@ -84,9 +84,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <StructuredData />
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-gray-100 to-gray-200 backdrop-blur-sm border-b border-gray-400/30 transition-all duration-300">
+      <nav className="flex items-center justify-between px-6 bg-gradient-to-r from-gray-100 to-gray-200 backdrop-blur-sm border-b border-gray-400/30 transition-all duration-300">
         <div className="flex items-center gap-3">
-          <div className="w-16 h-16 relative">
+          <div className="w-24 h-20 relative">
             <Image 
               src="/logo.png" 
               alt="Solara Event Logo" 

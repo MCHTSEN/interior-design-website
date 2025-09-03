@@ -21,17 +21,17 @@ const services: Service[] = [
     categoryIcon: <HeartHandshake className="w-6 h-6" />,
     items: [
       {
-        title: "Yerli & Yabancı Düğünler",
+        title: "Yerli ve Yabancı Düğünler",
         image: "/yerli-yabanci-dugun.JPG",
         icon: <Heart className="w-5 h-5" />,
       },
       {
-        title: "Nişan & Söz Törenleri",
+        title: "Nişan ve Söz Organizasyonu",
         image: "/nisan-soz-torenleri.jpg",
         icon: <Calendar className="w-5 h-5" />,
       },
       {
-        title: "Baby Shower / Doğum Günü Partileri",
+        title: "Baby Shower ve Doğum Günleri",
         image: "/baby-shower.jpg",
         icon: <Baby className="w-5 h-5" />,
       },
@@ -40,11 +40,6 @@ const services: Service[] = [
         image: "/temali-kutlamalar.jpg",
         icon: <Sparkles className="w-5 h-5" />,
       },
-      {
-        title: "Evlilik Teklifi Organizasyonu",
-        image: "/evlilik-teklifi.jpg",
-        icon: <PartyPopper className="w-5 h-5" />,
-      },
     ]
   },
   {
@@ -52,7 +47,7 @@ const services: Service[] = [
     categoryIcon: <Building className="w-6 h-6" />,
     items: [
       {
-        title: "Gala Geceleri & Ödül Törenleri",
+        title: "Gala Geceleri",
         image: "/gala-geceleri.jpg",
         icon: <Award className="w-5 h-5" />,
       },
@@ -62,12 +57,12 @@ const services: Service[] = [
         icon: <Building className="w-5 h-5" />,
       },
       {
-        title: "Basın Toplantıları & PR Etkinlikleri",
+        title: "Basın Toplantıları",
         image: "/biz_kimiz_1.JPG",
         icon: <Mic className="w-5 h-5" />,
       },
       {
-        title: "Eğitim & Motivasyon Kampları",
+        title: "Eğitim Kampları",
         image: "/egitim-motivasyon-kamp.JPG",
         icon: <GraduationCap className="w-5 h-5" />,
       },
@@ -80,11 +75,6 @@ const services: Service[] = [
         title: "Networking Davetleri",
         image: "/biz_kimiz_2.JPG",
         icon: <Network className="w-5 h-5" />,
-      },
-      {
-        title: "Uluslararası Organizasyonlar",
-        image: "/ulurslararasi-organizasyonlar.jpg",
-        icon: <Globe className="w-5 h-5" />,
       },
     ]
   }
