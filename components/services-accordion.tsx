@@ -11,7 +11,6 @@ interface Service {
 
 interface ServiceItem {
   title: string
-  description: string
   image: string
   icon: React.ReactNode
 }
@@ -23,31 +22,26 @@ const services: Service[] = [
     items: [
       {
         title: "Yerli & Yabancı Düğünler",
-        description: "Hayalinizdeki düğünü gerçeğe dönüştürüyoruz. Konsept tasarımından dekor uygulamasına, catering hizmetlerinden eğlence programına kadar her detayı özenle planlıyor, kültürel farklılıkları göz önünde bulundurarak unutulmaz bir deneyim yaratıyoruz.",
         image: "/yerli-yabanci-dugun.JPG",
         icon: <Heart className="w-5 h-5" />,
       },
       {
         title: "Nişan & Söz Törenleri",
-        description: "Birlikteliğinizin ilk adımlarını özel kılıyoruz. Modern veya geleneksel konseptlerle, size özel tasarladığımız nişan ve söz törenlerinde, sevdiklerinizle paylaşacağınız mutlu anları kusursuz bir organizasyonla taçlandırıyoruz.",
         image: "/nisan-soz-torenleri.jpg",
         icon: <Calendar className="w-5 h-5" />,
       },
       {
         title: "Baby Shower / Doğum Günü Partileri",
-        description: "Özel günlerinizi eğlenceli ve yaratıcı temalarla kutluyoruz. Bebek partilerinden yetişkin doğum günlerine, tematik dekorasyonlardan özel aktivitelere kadar her yaş grubuna uygun benzersiz organizasyonlar düzenliyoruz.",
         image: "/baby-shower.jpg",
         icon: <Baby className="w-5 h-5" />,
       },
       {
         title: "Temalı Kutlamalar",
-        description: "Hayal gücünüzün sınırlarını zorlayan özel konseptler yaratıyoruz. Vintage, bohemian, gatsby veya tamamen size özel temalarla, misafirlerinizi büyüleyecek unutulmaz deneyimler tasarlıyoruz.",
         image: "/temali-kutlamalar.jpg",
         icon: <Sparkles className="w-5 h-5" />,
       },
       {
         title: "Evlilik Teklifi Organizasyonu",
-        description: "Hayatınızın en özel anını mükemmel kılıyoruz. Romantik ve yaratıcı evlilik teklifi konseptleriyle, partnerinize unutamayacağı sürprizler hazırlıyor, bu eşsiz anı ölümsüzleştiriyoruz.",
         image: "/evlilik-teklifi.jpg",
         icon: <PartyPopper className="w-5 h-5" />,
       },
@@ -59,43 +53,36 @@ const services: Service[] = [
     items: [
       {
         title: "Gala Geceleri & Ödül Törenleri",
-        description: "Kurumsal başarılarınızı görkemli organizasyonlarla kutluyoruz. Sahne tasarımından ışık ve ses sistemlerine, protokol yönetiminden catering hizmetlerine kadar tüm detayları profesyonelce yönetiyor, markanızın prestijini yansıtıyoruz.",
         image: "/gala-geceleri.jpg",
         icon: <Award className="w-5 h-5" />,
       },
       {
         title: "Açılış & Lansman Etkinlikleri",
-        description: "Yeni başlangıçlarınızı etkileyici organizasyonlarla duyuruyoruz. Ürün lansmanlarından mağaza açılışlarına, konsept tasarımından davetli yönetimine kadar markanızı öne çıkaracak yaratıcı etkinlikler düzenliyoruz.",
         image: "/acilis-lansman.jpg",
         icon: <Building className="w-5 h-5" />,
       },
       {
         title: "Basın Toplantıları & PR Etkinlikleri",
-        description: "Mesajınızı doğru kitleye ulaştırıyoruz. Basın mensuplarının katılımını sağlayacak profesyonel organizasyonlarla, marka görünürlüğünüzü artırıyor ve medya ilişkilerinizi güçlendiriyoruz.",
         image: "/biz_kimiz_1.JPG",
         icon: <Mic className="w-5 h-5" />,
       },
       {
         title: "Eğitim & Motivasyon Kampları",
-        description: "Ekibinizin gelişimini destekleyen verimli organizasyonlar düzenliyoruz. Otel seçiminden workshop düzenlemelerine, team building aktivitelerinden konuk konuşmacı organizasyonlarına kadar her detayı planlıyoruz.",
         image: "/egitim-motivasyon-kamp.JPG",
         icon: <GraduationCap className="w-5 h-5" />,
       },
       {
         title: "Bayi Toplantıları",
-        description: "İş ortaklarınızla bağlarınızı güçlendiriyoruz. Bayi toplantılarınızı verimli ve motive edici organizasyonlarla destekliyor, network fırsatları yaratarak iş birliklerinizi pekiştiriyoruz.",
         image: "/bayi-toplantilari.JPG",
         icon: <Handshake className="w-5 h-5" />,
       },
       {
         title: "Networking Davetleri",
-        description: "İş dünyasını bir araya getiren prestijli etkinlikler organize ediyoruz. Kokteyl partilerinden iş yemeklerine, sektörel buluşmalardan VIP davetlere kadar profesyonel network ortamları yaratıyoruz.",
         image: "/biz_kimiz_2.JPG",
         icon: <Network className="w-5 h-5" />,
       },
       {
         title: "Uluslararası Organizasyonlar",
-        description: "Sınırları aşan etkinlikler düzenliyoruz. Farklı kültürleri ve iş yapış şekillerini bilen deneyimli ekibimizle, uluslararası standartlarda organizasyonlar gerçekleştiriyor, global markanızı destekliyoruz.",
         image: "/ulurslararasi-organizasyonlar.jpg",
         icon: <Globe className="w-5 h-5" />,
       },
@@ -176,11 +163,6 @@ export function ServicesAccordion() {
                         }`} 
                       />
                     </button>
-                    {categoryIndex === activeCategory && activeService === serviceIndex && (
-                      <div className="px-4 pb-4 pt-2">
-                        <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                      </div>
-                    )}
                   </div>
                 ))}
               </div>

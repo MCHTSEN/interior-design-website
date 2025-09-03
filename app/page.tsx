@@ -129,10 +129,6 @@ export default function HomePage() {
             <div className="inline-block bg-gradient-to-r from-black to-gray-800 text-white px-4 py-2 rounded-full text-sm mb-6">
               Hizmet Alanlarımız
             </div>
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Profesyonel Etkinlik Organizasyon Hizmetlerimiz</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hayalinizdeki etkinliği gerçeğe dönüştürmek için kapsamlı hizmetlerimizle yanınızdayız.
-            </p>
           </div>
 
           <ServicesAccordion />
